@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://qdmrugqc6gej"]
+
+[ext_resource type="Script" path="res://Character/MOB/States/chase_mob_state.gd" id="1_re61r"]
+
+[node name="chase_state" type="Area2D"]
+script = ExtResource("1_re61r")

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dax7ew0hmbprl"]
+
+[ext_resource type="Script" path="res://Character/MOB/States/idle_mob_state.gd" id="1_ju45m"]
+[ext_resource type="PackedScene" uid="uid://18u3fmjwmpry" path="res://Global/Utils/random_timer.tscn" id="2_ixa63"]
+
+[node name="idle_state" type="Node2D"]
+script = ExtResource("1_ju45m")
+
+[node name="random_timer" parent="." instance=ExtResource("2_ixa63")]
+one_shot = true

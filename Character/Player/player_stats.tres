@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PlayerStats" load_steps=2 format=3 uid="uid://dgn4d2na6mw6d"]
+
+[ext_resource type="Script" path="res://Character/Player/player_stats.gd" id="1_gwxoa"]
+
+[resource]
+script = ExtResource("1_gwxoa")
+safety_duration = 0.2
+max_hp = 10
+damage_value = 1
+damage_type = 0
+knockback_strength = 120
+acceleration = 900
+speed = 300
+mass = 200

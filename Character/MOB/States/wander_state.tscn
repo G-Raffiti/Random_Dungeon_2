@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://dj23b1h80ptj4"]
+
+[ext_resource type="Script" path="res://Character/MOB/States/wander_mob_state.gd" id="1_ls1fx"]
+[ext_resource type="PackedScene" uid="uid://18u3fmjwmpry" path="res://Global/Utils/random_timer.tscn" id="2_sg1jx"]
+
+[node name="wander_state" type="Node2D"]
+script = ExtResource("1_ls1fx")
+
+[node name="random_timer" parent="." instance=ExtResource("2_sg1jx")]
+one_shot = true

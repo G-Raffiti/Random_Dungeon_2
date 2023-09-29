@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://dtqijsf4hb4gv"]
+
+[node name="player_death_effect" type="Node2D"]

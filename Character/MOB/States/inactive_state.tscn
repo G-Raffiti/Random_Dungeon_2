@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cat4ewft6rhtx"]
+
+[ext_resource type="Script" path="res://Character/MOB/States/inactive_mob_state.gd" id="1_x8ia7"]
+
+[node name="inactive_state" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+script = ExtResource("1_x8ia7")

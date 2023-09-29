@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://d08wgs03l4pd3"]
+
+[ext_resource type="Script" path="res://Character/MOB/States/melee_attack_mob_state.gd" id="1_8ywp2"]
+
+[node name="melee_attack_state" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+monitorable = false
+priority = 1
+script = ExtResource("1_8ywp2")
+priority = 1
+
+[node name="timer" type="Timer" parent="."]
