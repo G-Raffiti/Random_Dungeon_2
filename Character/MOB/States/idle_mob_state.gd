@@ -6,6 +6,8 @@ extends State
 
 func _ready():
 	timer.timeout.connect(_on_timeout)
+	self.body_entered.connect(_on_player_entered)
+	self.body_exited.connect(_on_player_exited)
 
 func get_state_name() -> StringName:
 	return 'IDLE'
@@ -27,3 +29,9 @@ func update(_delta: float) -> void:
 
 func _on_timeout() -> void:
 	state_machine.try_change_state('WANDER')
+
+func _on_player_entered(_body: CharacterBody2D) -> void:
+	send_signal_on()
+
+func _on_player_exited(_body: CharacterBody2D) -> void:
+	send_signal_off()

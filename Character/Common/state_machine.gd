@@ -19,10 +19,14 @@ var user: Character
 func initialize(ability_holder: AbilityHolder, character: Character) -> void:
 	abilities = ability_holder
 	user = character
+	var states_to_sort: Array = []
 	for n in get_child_count():
 		if not get_child(n) is State: continue
 		var state_n = get_child(n) as State
-		states[state_n.get_state_name()] = state_n
+		states_to_sort.push_front([state_n.get_state_name(), state_n])
+	states_to_sort.sort_custom(func(a, b): a[1].state_priority > b[1].state_priority)
+	for state_sorted in states_to_sort:
+		states[state_sorted[0]] = state_sorted[1]
 	connect_states()
 	self.state = states['INACTIVE']
 
@@ -33,11 +37,11 @@ func connect_states() -> void:
 func try_change_state(state_name: StringName) -> void:
 	if not states.has(state_name): return
 	var new_state = states[state_name]
-	if new_state.priority >= state.priority:
+	if new_state.state_priority >= state.state_priority:
 		self.state = new_state
 
 func back_main_state() -> void:
-	self.state = states['IDLE']
+	self.state = states['INACTIVE']
 	for n in states:
 		if 'monitoring' in states[n]:
 			states[n].set_deferred('monitoring', false)

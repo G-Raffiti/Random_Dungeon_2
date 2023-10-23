@@ -7,7 +7,7 @@ signal state_condition_on(state_name: StringName)
 ## signal sent to exit this state if a ondition trigger (will automatically go back to the main state)
 signal state_condition_off
 ## the importance of a state, bigger = more important ex:(attack > idle)
-@export var priority: int
+@export var state_priority: int
 
 @onready var state_machine: StateMachine
 var character: Character

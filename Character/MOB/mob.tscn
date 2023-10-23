@@ -580,12 +580,14 @@ input_action = "main"
 [node name="state_machine" type="Node2D" parent="."]
 script = ExtResource("11_22wus")
 
-[node name="idle_state" parent="state_machine" instance=ExtResource("13_rwxyt")]
-
 [node name="inactive_state" parent="state_machine" instance=ExtResource("14_8gjea")]
+state_priority = -1
+
+[node name="idle_state" parent="state_machine" instance=ExtResource("13_rwxyt")]
+collision_layer = 0
 collision_mask = 256
 
-[node name="inactive_range" type="CollisionShape2D" parent="state_machine/inactive_state"]
+[node name="inactive_range" type="CollisionShape2D" parent="state_machine/idle_state"]
 z_index = -1
 shape = SubResource("CircleShape2D_wj04i")
 one_way_collision_margin = 0.0
@@ -597,6 +599,7 @@ debug_color = Color(1, 1, 1, 0)
 collision_layer = 0
 collision_mask = 256
 monitorable = false
+state_priority = 1
 
 [node name="chase_range" type="CollisionShape2D" parent="state_machine/chase_state"]
 z_index = -1
@@ -605,6 +608,7 @@ debug_color = Color(0.956863, 0.211765, 0, 0)
 
 [node name="melee_attack_state" parent="state_machine" instance=ExtResource("18_7p7qr")]
 ability_resource = ExtResource("19_l660s")
+state_priority = 2
 
 [node name="melee_range" type="CollisionShape2D" parent="state_machine/melee_attack_state"]
 z_index = -1
