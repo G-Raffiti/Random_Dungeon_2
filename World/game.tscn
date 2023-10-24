@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcbqthljpod4p"]
+
+[ext_resource type="PackedScene" uid="uid://cw0f6lrf6c16c" path="res://World/world.tscn" id="1_is7pu"]
+[ext_resource type="PackedScene" uid="uid://cfdfghprkhxnw" path="res://UI/HUD/PlayerHP/PlayerHPBar.tscn" id="2_okq3f"]
+
+[node name="Game" type="Node2D"]
+
+[node name="world" parent="." instance=ExtResource("1_is7pu")]
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="PlayerHPBar" parent="UI" instance=ExtResource("2_okq3f")]

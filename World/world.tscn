@@ -4,12 +4,12 @@
 [ext_resource type="PackedScene" uid="uid://djn5m6ipdpvod" path="res://Character/MOB/mob.tscn" id="2_bf0uq"]
 [ext_resource type="Script" path="res://Character/MOB/mob_stats.gd" id="3_yyelt"]
 
-[sub_resource type="Resource" id="Resource_45dy3"]
+[sub_resource type="Resource" id="Resource_54c2d"]
 resource_local_to_scene = true
 script = ExtResource("3_yyelt")
 xp_value = 1
 safety_duration = 0.1
-max_hp = 2
+max_hp = 10
 damage_value = 1
 damage_type = 0
 knockback_strength = 0
@@ -25,7 +25,7 @@ position = Vector2(2447, 447)
 
 [node name="mob" parent="." instance=ExtResource("2_bf0uq")]
 position = Vector2(624, 400)
-mob_stats = SubResource("Resource_45dy3")
+mob_stats = SubResource("Resource_54c2d")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1991, 319)

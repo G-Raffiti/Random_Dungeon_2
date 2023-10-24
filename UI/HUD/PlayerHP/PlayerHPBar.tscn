@@ -1,0 +1,38 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfdfghprkhxnw"]
+
+[ext_resource type="Script" path="res://UI/HUD/PlayerHP/hud_player_hp_ui.gd" id="1_v0sqg"]
+
+[node name="PlayerHPBar" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -706.0
+offset_bottom = -619.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v0sqg")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+max_value = 60.0
+step = 1.0
+value = 25.0
+rounded = true
+show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "25/60"
+horizontal_alignment = 1
+vertical_alignment = 1

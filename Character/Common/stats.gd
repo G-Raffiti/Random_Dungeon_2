@@ -10,7 +10,13 @@ signal die()
 ## seconds of invulnerability after taking a hit
 @export var safety_duration: float = 0.0
 ## maximum life
-@export var max_hp: int = 2
+@export var max_hp: int = 10:
+	get: return max_hp
+	set(value):
+		max_hp = value
+		hp_changed.emit(hp, max_hp)
+
+## current life
 var hp: int = max_hp:
 	get: return hp
 	set(value):
