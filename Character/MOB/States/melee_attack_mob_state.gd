@@ -28,6 +28,8 @@ func exit_state() -> void:
 	target = null
 
 func update(_delta: float) -> void:
+	if not target: 
+		return send_signal_off()
 	direction = get_target_direction()
 	character.target_direction = direction
 
