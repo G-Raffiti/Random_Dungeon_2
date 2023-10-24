@@ -24,7 +24,7 @@ func initialize(ability_holder: AbilityHolder, character: Character) -> void:
 		if not get_child(n) is State: continue
 		var state_n = get_child(n) as State
 		states_to_sort.push_front([state_n.get_state_name(), state_n])
-	states_to_sort.sort_custom(func(a, b): a[1].state_priority > b[1].state_priority)
+	states_to_sort.sort_custom(func(a, b): return a[1].state_priority > b[1].state_priority)
 	for state_sorted in states_to_sort:
 		states[state_sorted[0]] = state_sorted[1]
 	connect_states()
