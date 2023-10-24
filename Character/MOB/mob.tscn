@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=3 uid="uid://djn5m6ipdpvod"]
+[gd_scene load_steps=59 format=3 uid="uid://djn5m6ipdpvod"]
 
 [ext_resource type="Script" path="res://Character/MOB/mob.gd" id="1_361uw"]
 [ext_resource type="PackedScene" uid="uid://dtqijsf4hb4gv" path="res://Effects/death_effect.tscn" id="2_2a0o2"]
@@ -21,13 +21,15 @@
 [ext_resource type="PackedScene" uid="uid://d08wgs03l4pd3" path="res://Character/MOB/States/melee_attack_state.tscn" id="18_7p7qr"]
 [ext_resource type="Resource" uid="uid://dwf5wj8f5v336" path="res://Ability/Abilities/mob_melee_attack/mob_melee_attack.tres" id="19_l660s"]
 [ext_resource type="Script" path="res://Global/Utils/audio_player_ramdom_pitch.gd" id="20_cwfch"]
+[ext_resource type="Script" path="res://UI/MOB/mob_ui_manager.gd" id="22_o4j1y"]
+[ext_resource type="Script" path="res://UI/MOB/MobHP/mob_hp_bar.gd" id="23_gjlie"]
 
 [sub_resource type="Resource" id="Resource_ybj8i"]
 resource_local_to_scene = true
 script = ExtResource("2_iyljq")
 xp_value = 1
 safety_duration = 0.1
-max_hp = 2
+max_hp = 10
 damage_value = 1
 damage_type = 0
 knockback_strength = 0
@@ -474,11 +476,12 @@ states/walk/node = SubResource("AnimationNodeBlendTree_36ro6")
 states/walk/position = Vector2(514.667, 22)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_3sqcu"), "idle", "RESET", SubResource("AnimationNodeStateMachineTransition_6x61b"), "RESET", "idle", SubResource("AnimationNodeStateMachineTransition_oe3ke"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_n8bqy"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_t4vsi"), "idle", "melee_attack", SubResource("AnimationNodeStateMachineTransition_rtr7w"), "melee_attack", "idle", SubResource("AnimationNodeStateMachineTransition_oawhg"), "walk", "melee_attack", SubResource("AnimationNodeStateMachineTransition_6ox25"), "melee_attack", "walk", SubResource("AnimationNodeStateMachineTransition_4s14t")]
 
-[node name="mob" type="CharacterBody2D" node_paths=PackedStringArray("movement", "hurtbox", "hitbox", "ability_holder", "state_machine", "sound", "hit_sound", "hit_anim", "anim", "anim_tree", "sprites")]
+[node name="mob" type="CharacterBody2D" node_paths=PackedStringArray("ui_manager", "movement", "hurtbox", "hitbox", "ability_holder", "state_machine", "sound", "hit_sound", "hit_anim", "anim", "anim_tree", "sprites")]
 collision_layer = 513
 collision_mask = 51
 script = ExtResource("1_361uw")
 mob_stats = SubResource("Resource_ybj8i")
+ui_manager = NodePath("ui_manager")
 movement = NodePath("movement")
 hurtbox = NodePath("sprites/AnimPart/hurtbox")
 hitbox = NodePath("sprites/AnimPart/arm_r/hitbox")
@@ -642,3 +645,42 @@ tree_root = SubResource("AnimationNodeStateMachine_k1g7a")
 anim_player = NodePath("../anim")
 parameters/melee_attack/TimeScale/scale = 1.0
 parameters/walk/TimeScale/scale = 1.0
+
+[node name="ui_manager" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("22_o4j1y")
+
+[node name="hp_bar" type="Control" parent="ui_manager"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -93.0
+offset_top = 23.0
+offset_right = 93.0
+offset_bottom = 47.0
+grow_horizontal = 2
+script = ExtResource("23_gjlie")
+
+[node name="ProgressBar" type="ProgressBar" parent="ui_manager/hp_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+step = 1.0
+value = 100.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="ui_manager/hp_bar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "10/10"
+horizontal_alignment = 1
+vertical_alignment = 1
