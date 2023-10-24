@@ -221,19 +221,17 @@ animation = &"idle"
 states/idle/node = SubResource("AnimationNodeAnimation_wtn1b")
 states/idle/position = Vector2(373.333, 70)
 
-[node name="_mob" type="Node2D" node_paths=PackedStringArray("movement", "hurtbox", "hitbox", "abilities", "state_machine", "sound", "hit_sound", "hit_anim", "anim_tree", "rotation_part")]
+[node name="_mob" type="Node2D" node_paths=PackedStringArray("movement", "hurtbox", "hitbox", "state_machine", "sound", "hit_sound", "hit_anim", "anim_tree")]
 script = ExtResource("1_qpxk7")
 mob_stats = SubResource("Resource_vwkvw")
 movement = NodePath("movement")
 hurtbox = NodePath("sprites/body/hurtbox")
 hitbox = NodePath("sprites/body/arm_r/hitbox")
-abilities = NodePath("ability_holder")
 state_machine = NodePath("state_machine")
 sound = NodePath("animation_&_sound/sound")
 hit_sound = NodePath("animation_&_sound/hit_sound")
 hit_anim = NodePath("animation_&_sound/hit_anim")
 anim_tree = NodePath("animation_&_sound/AnimationTree")
-rotation_part = NodePath("sprites/rotation_part")
 death_effect_ps = ExtResource("3_ofqj4")
 hurt_effect_ps = ExtResource("4_lhbh3")
 

@@ -19,7 +19,7 @@ func ends(user):
 	scale_animation_speed_back(user, "parameters/melee_attack/TimeScale/scale")
 
 func process(_user, _delta):
-	return #user.set_anim('melee_attack')
+	return
 
 #Region Extra
 

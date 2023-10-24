@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://djn5m6ipdpvod" path="res://Character/MOB/mob.tscn" id="2_bf0uq"]
 [ext_resource type="Script" path="res://Character/MOB/mob_stats.gd" id="3_yyelt"]
 
-[sub_resource type="Resource" id="Resource_54c2d"]
+[sub_resource type="Resource" id="Resource_ksr78"]
 resource_local_to_scene = true
 script = ExtResource("3_yyelt")
 xp_value = 1
@@ -25,7 +25,7 @@ position = Vector2(2447, 447)
 
 [node name="mob" parent="." instance=ExtResource("2_bf0uq")]
 position = Vector2(624, 400)
-mob_stats = SubResource("Resource_54c2d")
+mob_stats = SubResource("Resource_ksr78")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(1991, 319)
