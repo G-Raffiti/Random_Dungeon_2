@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("2_jffqh")
-damage_value = 0
+damage_value = 1
 damage_type = 0
 knockback_strenght = 120
 can_move = true

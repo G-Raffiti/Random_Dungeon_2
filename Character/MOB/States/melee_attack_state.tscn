@@ -8,6 +8,6 @@ collision_mask = 4
 monitorable = false
 priority = 1
 script = ExtResource("1_8ywp2")
-priority = 1
+state_priority = 2
 
 [node name="timer" type="Timer" parent="."]

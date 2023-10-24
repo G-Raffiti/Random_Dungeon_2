@@ -4,3 +4,4 @@
 
 [node name="chase_state" type="Area2D"]
 script = ExtResource("1_re61r")
+state_priority = 1
