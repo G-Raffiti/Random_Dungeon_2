@@ -20,7 +20,7 @@ func get_knockback(hurtbox_position : Node2D) -> Vector2:
 	if knockback_fixed_direction != Vector2.ZERO:
 		return knockback_fixed_direction * knockback_strength
 	else:
-		return (hurtbox_position.get_position() - get_global_position()).normalized() * knockback_strength
+		return (get_global_position() - hurtbox_position.get_position()).normalized() * knockback_strength
 
 func enable() -> void:
 	set_deferred('monitorable', true)
