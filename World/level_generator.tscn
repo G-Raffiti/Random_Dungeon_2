@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://djj5k01wi2gyl"]
+
+[ext_resource type="Script" path="res://World/dungeon_generator.gd" id="1_tacca"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tacca")
+steps = 2000
+walkers = 10
