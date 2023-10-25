@@ -45,7 +45,7 @@ finalized: ✔️✔️✔️, done: ✔️, in progress: 🔵,  to do: ❌
     - Main Menu ❌
 
 - World :
-    - proceduraly generated Dungeon Tilemap based ❌
+    - proceduraly generated Dungeon Tilemap based 🔵
     - HUB ❌
     - MOB Spawner ❌
     - BOSS Fight ❌
