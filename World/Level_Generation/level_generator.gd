@@ -1,20 +1,27 @@
-extends Node
+extends Resource
+class_name LevelGenerator
 
 enum LevelType {cave, dungeon, forest}
-const dirs = [Vector2i.UP, Vector2i.RIGHT, Vector2i.DOWN, Vector2i.LEFT]
+const dirs = [Vector2i.UP, Vector2i.LEFT, Vector2i.DOWN, Vector2i.RIGHT]
 
-@export_range(1, 20) var coridor_len = 5
-@export_range(1, 20) var dencity_room = 10
-@export_range(1, 20) var max_room_size = 7
+@export_category('Level Generator')
+@export var type = LevelType.cave
 @export_range(50, 2000) var steps = 500
 @export_range(1, 10) var walkers = 3
-@export var type = LevelType.cave
+@export_group('Dungeon')
+@export_range(1, 20) var max_room_size = 7
+@export_range(1, 20) var coridor_len = 5
+@export_range(1, 20) var dencity_room = 10
 
+class Map:
+	var level: Array[Vector2i]
+	var size: Vector2i
+	var type: LevelType
 
-func _input(event):
-	if event.is_action_pressed('ui_accept'):
-		get_level(walkers, steps, type)
-
+	func _init(_level: Array[Vector2i], _size: Array[Vector2i], _type: LevelType):
+		level = _level
+		size = _size[1] - _size[0]
+		type = _type
 
 class Walker:
 	var pos: Vector2i = Vector2i.ZERO
@@ -48,16 +55,22 @@ func generate_cave_level(number_of_walker: int, max_steps: int) -> Array[Vector2
 	var dungeon: Array[Vector2i] = [Vector2i.ZERO]
 	for n in range(number_of_walker):
 		var walker: Walker = Walker.new(n, LevelType.cave)
-		while walker.steps < max_steps / number_of_walker:
+		while walker.steps < (max_steps / number_of_walker):
 			var step = walker.get_next_pos()
 			if not dungeon.has(step):
 				dungeon.push_front(step)
+			if not dungeon.has(step + Vector2i.UP):
+				dungeon.push_front(step + Vector2i.UP)
+			if not dungeon.has(step + Vector2i.RIGHT):
+				dungeon.push_front(step + Vector2i.RIGHT)
+			if not dungeon.has(step + Vector2i(1, -1)):
+				dungeon.push_front(step + Vector2i(1, -1))
 			else:
 				walker.steps -= 1
 	return dungeon		 
 
 func add_room(dungeon: Array[Vector2i], pos: Vector2i):
-	var room_size = Vector2i(randi_range(3, max_room_size), randi_range(3, max_room_size))
+	var room_size = Vector2i(randi_range(4, max_room_size), randi_range(4, max_room_size))
 	var corner = pos - room_size / randi_range(2, max_room_size / 2)
 	for y in range(room_size.y):
 		for x in range(room_size.x):
@@ -71,11 +84,17 @@ func generate_dungeon_level(number_of_walker: int, max_steps: int) -> Array[Vect
 	for n in range(number_of_walker):
 		var walker: Walker = Walker.new(n, LevelType.dungeon, coridor_len)
 		add_room(dungeon, walker.pos)
-		while walker.steps < max_steps / number_of_walker:
+		while walker.steps < (max_steps / number_of_walker):
 			var step = walker.get_next_pos()
 			if not dungeon.has(step):
 				dungeon.push_front(step)
-			elif walker.steps % (20 - dencity_room) == 0:
+			if not dungeon.has(step + Vector2i.UP):
+				dungeon.push_front(step + Vector2i.UP)
+			if not dungeon.has(step + Vector2i.RIGHT):
+				dungeon.push_front(step + Vector2i.RIGHT)
+			if not dungeon.has(step + Vector2i(1, -1)):
+				dungeon.push_front(step + Vector2i(1, -1))
+			elif walker.steps % (21 - dencity_room) == 0:
 				add_room(dungeon, step)
 		add_room(dungeon, walker.pos)
 	return dungeon 
@@ -90,35 +109,39 @@ func get_size(dungeon: Array[Vector2i]) -> Array[Vector2i]:
 			down_right.x = cell.x
 	return [up_left, down_right]
 
-func get_level(number_of_walkers: int, max_steps: int = 500, type: LevelType = LevelType.cave) -> Array[Array]:
-	var level: Array[Array] = []
+func get_level(number_of_walkers: int = walkers, max_steps: int = steps, level_type: LevelType = type) -> Map:
+	# var level: Array[Array] = []
 	var dungeon: Array[Vector2i] = []
-	match type:
+	match level_type:
 		LevelType.cave:
 			dungeon = generate_cave_level(number_of_walkers, max_steps)
 		LevelType.dungeon:
 			dungeon = generate_dungeon_level(number_of_walkers, max_steps)
+
 	dungeon.sort_custom(func(a,b): return (a.y == b.y and a.x < b.x) or a.y < b.y)
+		
 	
 	var size = get_size(dungeon)
 
-	var border = []
-	for x in range(size[0].x - 1, size[1].x + 1):
-		border.push_back(false)
-	level.push_back(border)
+	# var border = []
+	# for x in range(size[0].x - 1, size[1].x + 1):
+	# 	border.push_back(false)
+	# level.push_back(border)
 
-	for y in range(size[0].y, size[1].y):
-		var line = [false]
-		for x in range(size[0].x, size[1].x):
-			if dungeon.has(Vector2i(x, y)):
-				line.push_back(true)
-			else:
-				line.push_back(false)
-		line.push_back(false)
-		level.push_back(line)
-	level.push_back(border)
-	print_level(level)
-	return level
+	# for y in range(size[0].y, size[1].y):
+	# 	var line = [false]
+	# 	for x in range(size[0].x, size[1].x):
+	# 		if dungeon.has(Vector2i(x, y)):
+	# 			line.push_back(true)
+	# 		else:
+	# 			line.push_back(false)
+	# 	line.push_back(false)
+	# 	level.push_back(line)
+	# level.push_back(border)
+	# print_level(level)
+
+	return Map.new(dungeon, size, level_type)
+	
 
 func print_dungeon(level: Array[Vector2i], size: Array[Vector2i]) -> void:
 	var up_line = ''
