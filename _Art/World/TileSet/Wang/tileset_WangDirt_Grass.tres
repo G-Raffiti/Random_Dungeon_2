@@ -1,28 +1,20 @@
 [gd_resource type="TileSet" load_steps=4 format=3 uid="uid://5ervk1i2mgs3"]
 
-[ext_resource type="Texture2D" uid="uid://e2rpk82rjd6w" path="res://_Art/World/TileSet/WangDirt_Grass/tileset_WangDirt_Grass.png" id="1"]
+[ext_resource type="Texture2D" uid="uid://e2rpk82rjd6w" path="res://_Art/World/TileSet/Wang/tileset_WangDirt_Grass.png" id="1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nfm6m"]
 texture = ExtResource("1")
 texture_region_size = Vector2i(128, 128)
 1:0/0 = 0
 1:0/0/terrain_set = 0
-1:0/0/terrains_peering_bit/right_side = 0
 1:0/0/terrains_peering_bit/bottom_right_corner = 0
-1:0/0/terrains_peering_bit/bottom_side = 0
 1:1/0 = 0
 1:1/0/terrain_set = 0
 1:1/0/terrain = 0
-1:1/0/terrains_peering_bit/right_side = 0
 1:1/0/terrains_peering_bit/bottom_right_corner = 0
-1:1/0/terrains_peering_bit/bottom_side = 0
-1:1/0/terrains_peering_bit/top_side = 0
 1:1/0/terrains_peering_bit/top_right_corner = 0
 1:2/0 = 0
 1:2/0/terrain_set = 0
-1:2/0/terrain = 0
-1:2/0/terrains_peering_bit/right_side = 0
-1:2/0/terrains_peering_bit/top_side = 0
 1:2/0/terrains_peering_bit/top_right_corner = 0
 0:1/next_alternative_id = 4
 0:1/0 = 0
@@ -32,11 +24,8 @@ texture_region_size = Vector2i(128, 128)
 0:1/3 = 3
 2:0/0 = 0
 2:0/0/terrain_set = 0
-2:0/0/terrain = 0
 2:0/0/terrains_peering_bit/bottom_right_corner = 0
-2:0/0/terrains_peering_bit/bottom_side = 0
 2:0/0/terrains_peering_bit/bottom_left_corner = 0
-2:0/0/terrains_peering_bit/left_side = 0
 2:1/next_alternative_id = 7
 2:1/0 = 0
 2:1/0/terrain_set = 0
@@ -99,7 +88,7 @@ texture = ExtResource("1")
 
 [resource]
 tile_size = Vector2i(128, 128)
-terrain_set_0/mode = 0
+terrain_set_0/mode = 1
 terrain_set_0/terrain_0/name = "Dirt"
 terrain_set_0/terrain_0/color = Color(1, 0.141176, 0.223529, 1)
 sources/0 = SubResource("TileSetAtlasSource_nfm6m")

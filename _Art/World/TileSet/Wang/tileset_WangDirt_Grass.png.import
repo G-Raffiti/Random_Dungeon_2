@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tdm8dx1363le"
-path="res://.godot/imported/tileset_Dirt.png-4ba8474bb2403429247dbb9b59678fc5.ctex"
+uid="uid://e2rpk82rjd6w"
+path="res://.godot/imported/tileset_WangDirt_Grass.png-990d58e65e030e46228bda7859861b93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://_Art/World/TileSet/Dirt/tileset_Dirt.png"
-dest_files=["res://.godot/imported/tileset_Dirt.png-4ba8474bb2403429247dbb9b59678fc5.ctex"]
+source_file="res://_Art/World/TileSet/Wang/tileset_WangDirt_Grass.png"
+dest_files=["res://.godot/imported/tileset_WangDirt_Grass.png-990d58e65e030e46228bda7859861b93.ctex"]
 
 [params]
 
