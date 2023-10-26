@@ -1,32 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://cw0f6lrf6c16c"]
 
-[ext_resource type="PackedScene" uid="uid://c6dgijxtv53tk" path="res://Character/Player/player.tscn" id="1_afhpy"]
-[ext_resource type="PackedScene" uid="uid://djn5m6ipdpvod" path="res://Character/MOB/mob.tscn" id="2_bf0uq"]
-[ext_resource type="Script" path="res://Character/MOB/mob_stats.gd" id="3_yyelt"]
+[ext_resource type="PackedScene" uid="uid://dl2mlqu6xhkfy" path="res://World/level_generator.tscn" id="1_chg12"]
+[ext_resource type="TileSet" uid="uid://cej7f3l66xbo1" path="res://_Art/World/TileSet/Blobs/TileSetNature.tres" id="2_xvs8g"]
+[ext_resource type="Script" path="res://World/Level_Generation/level_generator.gd" id="3_n5keh"]
 
-[sub_resource type="Resource" id="Resource_nr5rm"]
-resource_local_to_scene = true
-script = ExtResource("3_yyelt")
-xp_value = 1
-safety_duration = 0.1
-max_hp = 10
-damage_value = 1
-damage_type = 0
-knockback_strength = 0
-acceleration = 300
-speed = 150
-mass = 200
+[sub_resource type="Resource" id="Resource_pc2ls"]
+script = ExtResource("3_n5keh")
+type = 0
+steps = 500
+walkers = 3
+max_room_size = 7
+coridor_len = 5
+dencity_room = 10
 
 [node name="world" type="Node2D"]
 y_sort_enabled = true
 
-[node name="player" parent="." instance=ExtResource("1_afhpy")]
-position = Vector2(2447, 447)
-
-[node name="mob" parent="." instance=ExtResource("2_bf0uq")]
-position = Vector2(624, 400)
-mob_stats = SubResource("Resource_nr5rm")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1991, 319)
-zoom = Vector2(0.2, 0.2)
+[node name="Level_Generator" parent="." instance=ExtResource("1_chg12")]
+tileset = ExtResource("2_xvs8g")
+level_generator = SubResource("Resource_pc2ls")
