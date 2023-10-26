@@ -60,6 +60,7 @@ ui_down={
 [layer_names]
 
 2d_physics/layer_1="walk"
+2d_navigation/layer_1="floor_normal"
 2d_physics/layer_2="wall"
 2d_physics/layer_3="player_hurtbox"
 2d_physics/layer_4="player_hitbox"
