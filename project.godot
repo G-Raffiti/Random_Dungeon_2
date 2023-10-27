@@ -74,3 +74,4 @@ ui_down={
 [rendering]
 
 anti_aliasing/quality/msaa_2d=2
+viewport/transparent_background=true
