@@ -13,6 +13,7 @@ func enter_state() -> void:
 	return
 
 func exit_state() -> void:
+	character.set_anim('RESET')
 	PlayerData.stats.speed_modifier = 1
 	return
 

@@ -1,13 +1,13 @@
 extends State
 
 func get_state_name() -> StringName:
-	return 'IDLE'
+	return 'WALK'
 
 func can_enter_state() -> bool:
-	return character.velocity == Vector2.ZERO
+	return character.velocity != Vector2.ZERO
 
 func enter_state() -> void:
-	character.set_anim('idle')
+	character.set_anim('walk')
 
 func exit_state() -> void:
 	return
