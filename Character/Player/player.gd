@@ -23,3 +23,13 @@ func _physics_process(_delta):
 #Animation
 func _on_level_up(_level):
 	hit_anim.play("Holly")
+
+func _process(delta):
+	var isMoving = velocity != Vector2.ZERO
+	super._process(delta)
+	if velocity == Vector2.ZERO:
+		if isMoving:
+			state_machine.try_change_state('IDLE')
+	else:
+		if !isMoving:
+			state_machine.try_change_state('WALK')
