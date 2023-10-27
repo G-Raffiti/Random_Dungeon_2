@@ -188,29 +188,14 @@ animation = &"idle"
 animation = &"walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b4vtl"]
-priority = 2
-advance_mode = 2
-advance_condition = &"idle"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7tk5f"]
-priority = 3
-advance_mode = 2
-advance_condition = &"RESET"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tkvwp"]
-advance_mode = 2
-advance_condition = &"idle"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lsrv3"]
-reset = false
-advance_mode = 2
-advance_condition = &"walk"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4yjai"]
-reset = false
-priority = 2
-advance_mode = 2
-advance_condition = &"idle"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_iuxlo"]
 states/RESET/node = SubResource("AnimationNodeAnimation_oxdej")
@@ -320,6 +305,3 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="animation_&_sound"]
 tree_root = SubResource("AnimationNodeStateMachine_iuxlo")
 anim_player = NodePath("../AnimationPlayer")
-parameters/conditions/RESET = false
-parameters/conditions/idle = false
-parameters/conditions/walk = false
