@@ -19,6 +19,7 @@ random Dungeon 2 offers a simple yet addictive dungeon-crawling experience. Clim
 finalized: ✔️✔️✔️, done: ✔️, in progress: 🔵,  to do: ❌
 - Player :
     - Player Movement 2D Topdown or Isometric with WASD ✔️
+        - Animation 🔵
     - Player Dash ❌
     - Player Ability System 🔵
 
@@ -45,9 +46,12 @@ finalized: ✔️✔️✔️, done: ✔️, in progress: 🔵,  to do: ❌
     - Main Menu ❌
 
 - World :
-    - proceduraly generated Dungeon Tilemap based 🔵
+    - proceduraly generated Dungeon Tilemap based ✔️
+        - Spawn randomly placed Objets ❌
+        - MOB Spawner ❌
+        - Spawn Player in good spot ❌
+        - Spawn Exit Door ❌
     - HUB ❌
-    - MOB Spawner ❌
     - BOSS Fight ❌
 
 - Player Skills :
