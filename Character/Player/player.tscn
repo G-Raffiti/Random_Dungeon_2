@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://c6dgijxtv53tk"]
+[gd_scene load_steps=37 format=3 uid="uid://c6dgijxtv53tk"]
 
 [ext_resource type="Script" path="res://Character/Player/player.gd" id="1_q1xjo"]
 [ext_resource type="PackedScene" uid="uid://dtqijsf4hb4gv" path="res://Effects/death_effect.tscn" id="2_7ybi8"]
@@ -14,6 +14,7 @@
 [ext_resource type="Script" path="res://Character/Player/States/inactive_player_state.gd" id="9_opwty"]
 [ext_resource type="Texture2D" uid="uid://b4p8404p1ffds" path="res://Character/Player/Art/Bob_Walk.png" id="9_p1m1e"]
 [ext_resource type="Script" path="res://Character/Player/States/idle_player_state.gd" id="12_6livb"]
+[ext_resource type="Script" path="res://Character/Player/States/walk_player_state.gd" id="14_agswa"]
 [ext_resource type="Script" path="res://Global/Utils/audio_player_ramdom_pitch.gd" id="14_y643d"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uujpw"]
@@ -24,7 +25,7 @@ height = 62.0
 radius = 20.0
 height = 110.0
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_upo1h"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3rsit"]
 shader = ExtResource("4_cp3nk")
 shader_parameter/color = Color(1, 1, 1, 1)
 shader_parameter/progress = 0.0
@@ -183,21 +184,46 @@ animation = &"RESET"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_ykbv4"]
 animation = &"idle"
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8x581"]
+animation = &"walk"
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_b4vtl"]
+priority = 2
+advance_mode = 2
+advance_condition = &"idle"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_7tk5f"]
+priority = 3
+advance_mode = 2
+advance_condition = &"RESET"
 
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_tkvwp"]
+advance_mode = 2
+advance_condition = &"idle"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lsrv3"]
+reset = false
+advance_mode = 2
+advance_condition = &"walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_4yjai"]
+reset = false
+priority = 2
+advance_mode = 2
+advance_condition = &"idle"
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_iuxlo"]
 states/RESET/node = SubResource("AnimationNodeAnimation_oxdej")
 states/RESET/position = Vector2(465.778, 176.667)
-states/Start/position = Vector2(464.593, 106.074)
+states/Start/position = Vector2(467.062, 64.7407)
 states/idle/node = SubResource("AnimationNodeAnimation_ykbv4")
 states/idle/position = Vector2(686.667, 177.704)
-transitions = ["RESET", "idle", SubResource("AnimationNodeStateMachineTransition_b4vtl"), "idle", "RESET", SubResource("AnimationNodeStateMachineTransition_7tk5f"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_tkvwp")]
+states/walk/node = SubResource("AnimationNodeAnimation_8x581")
+states/walk/position = Vector2(686.716, 35.3333)
+transitions = ["RESET", "idle", SubResource("AnimationNodeStateMachineTransition_b4vtl"), "idle", "RESET", SubResource("AnimationNodeStateMachineTransition_7tk5f"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_tkvwp"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_lsrv3"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_4yjai")]
 
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("movement", "hurtbox", "hitbox", "ability_holder", "state_machine", "sound", "hit_sound", "hit_anim", "anim", "anim_tree", "sprites")]
+top_level = true
 collision_layer = 257
 collision_mask = 51
 script = ExtResource("1_q1xjo")
@@ -243,8 +269,9 @@ polygon = PackedVector2Array(-3, -71, 78, -71, 78, -45, -3, -45)
 [node name="rotation_part" type="Node2D" parent="sprites"]
 
 [node name="Sprite2D" type="Sprite2D" parent="sprites"]
+light_mask = 2
 texture_filter = 1
-material = SubResource("ShaderMaterial_upo1h")
+material = SubResource("ShaderMaterial_3rsit")
 texture = ExtResource("5_crx8v")
 flip_h = true
 hframes = 8
@@ -261,9 +288,14 @@ script = ExtResource("6_r6r3x")
 
 [node name="inactive_state" type="Node2D" parent="state_machine"]
 script = ExtResource("9_opwty")
+state_priority = null
 
 [node name="idle_state" type="Node2D" parent="state_machine"]
 script = ExtResource("12_6livb")
+state_priority = null
+
+[node name="walk_state" type="Node2D" parent="state_machine"]
+script = ExtResource("14_agswa")
 
 [node name="animation_&_sound" type="Node" parent="."]
 
@@ -280,7 +312,7 @@ libraries = {
 }
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="animation_&_sound"]
-autoplay = "idle"
+autoplay = "RESET"
 libraries = {
 "": SubResource("AnimationLibrary_l8e67")
 }
@@ -288,4 +320,6 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="animation_&_sound"]
 tree_root = SubResource("AnimationNodeStateMachine_iuxlo")
 anim_player = NodePath("../AnimationPlayer")
-active = true
+parameters/conditions/RESET = false
+parameters/conditions/idle = false
+parameters/conditions/walk = false
