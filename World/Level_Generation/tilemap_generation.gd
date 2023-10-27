@@ -13,4 +13,9 @@ func _input(event):
 		var map: LevelGenerator.Map = level_generator.get_level() as LevelGenerator.Map;
 		tile_map.set_cells_terrain_connect(1, map.level, 0, 0, false)
 		tile_map.set_cells_terrain_connect(2, map.border, 0, 1, false)
-		tile_map.set_cells_terrain_connect(0, map.level + map.border, 0, 2, false)
+
+		var floor: Array[Vector2i] = []
+		for x in range(map.top_left.x - 10, map.bottom_right.x + 11):
+			for y in range(map.top_left.y - 5, map.bottom_right.y + 6):
+				floor.append(Vector2i(x, y))
+		tile_map.set_cells_terrain_connect(0, floor, 0, 2, false)

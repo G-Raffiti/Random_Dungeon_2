@@ -18,12 +18,14 @@ Vector2i(1,1), Vector2i(-1,1), Vector2i(1,-1), Vector2i(-1,-1)]
 class Map:
 	var level: Array[Vector2i]
 	var border: Array[Vector2i]
-	var size: Vector2i
+	var top_left: Vector2i
+	var bottom_right: Vector2i
 	var type: LevelType
 
 	func _init(_level: Array[Vector2i], _size: Array[Vector2i], _type: LevelType, _border: Array[Vector2i] = []):
 		level = _level
-		size = _size[1] - _size[0]
+		top_left = _size[0]
+		bottom_right = _size[1]
 		type = _type
 		border = _border
 
