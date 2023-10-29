@@ -475,6 +475,7 @@ states/melee_attack/position = Vector2(678.667, 97.7036)
 states/walk/node = SubResource("AnimationNodeBlendTree_36ro6")
 states/walk/position = Vector2(514.667, 22)
 transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition_3sqcu"), "idle", "RESET", SubResource("AnimationNodeStateMachineTransition_6x61b"), "RESET", "idle", SubResource("AnimationNodeStateMachineTransition_oe3ke"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_n8bqy"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_t4vsi"), "idle", "melee_attack", SubResource("AnimationNodeStateMachineTransition_rtr7w"), "melee_attack", "idle", SubResource("AnimationNodeStateMachineTransition_oawhg"), "walk", "melee_attack", SubResource("AnimationNodeStateMachineTransition_6ox25"), "melee_attack", "walk", SubResource("AnimationNodeStateMachineTransition_4s14t")]
+graph_offset = Vector2(-2, -55)
 
 [node name="mob" type="CharacterBody2D" node_paths=PackedStringArray("ui_manager", "movement", "hurtbox", "hitbox", "ability_holder", "state_machine", "sound", "hit_sound", "hit_anim", "anim", "anim_tree", "sprites")]
 collision_layer = 513

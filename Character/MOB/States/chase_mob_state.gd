@@ -31,4 +31,8 @@ func _on_player_exited(_body: CharacterBody2D) -> void:
 	send_signal_off()
 
 func get_target_direction() -> Vector2:
+	var dir = target.position - character.position
+	if dir.length_squared() < 100:
+		send_signal_off()
+		return Vector2.ZERO
 	return (target.position - character.position).normalized()
