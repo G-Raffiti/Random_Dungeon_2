@@ -1,0 +1,144 @@
+[gd_scene load_steps=16 format=3 uid="uid://dcbqthljpod4p"]
+
+[ext_resource type="PackedScene" uid="uid://cw0f6lrf6c16c" path="res://World/world.tscn" id="1_is7pu"]
+[ext_resource type="PackedScene" uid="uid://c6dgijxtv53tk" path="res://Character/Player/player.tscn" id="2_433b0"]
+[ext_resource type="PackedScene" uid="uid://cfdfghprkhxnw" path="res://UI/HUD/PlayerHP/PlayerHPBar.tscn" id="2_okq3f"]
+[ext_resource type="TileSet" uid="uid://cej7f3l66xbo1" path="res://_Art/World/TileSet/Blobs/TileSetNature.tres" id="2_ook0a"]
+[ext_resource type="Script" path="res://Camera/camera_holder.gd" id="3_dbkdh"]
+[ext_resource type="Script" path="res://World/Level_Generation/level_generator.gd" id="3_j3atq"]
+[ext_resource type="Texture2D" uid="uid://34qv53p705pp" path="res://_Art/LightPoint2D.tres" id="4_r5jow"]
+[ext_resource type="PackedScene" uid="uid://c1oef5morv1e4" path="res://UI/HUD/MiniMap/mini_map.tscn" id="6_d2vad"]
+[ext_resource type="Script" path="res://Service/effect_spawner.gd" id="7_e54r4"]
+[ext_resource type="Script" path="res://Service/mob_spawner.gd" id="8_w7wt4"]
+
+[sub_resource type="Resource" id="Resource_cpro7"]
+script = ExtResource("3_j3atq")
+type = 0
+steps = 500
+walkers = 1
+max_room_size = 7
+coridor_len = 5
+dencity_room = 10
+
+[sub_resource type="Gradient" id="Gradient_d3xgx"]
+interpolation_mode = 2
+offsets = PackedFloat32Array(0.331269, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ip8t1"]
+gradient = SubResource("Gradient_d3xgx")
+width = 100
+height = 200
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[sub_resource type="Gradient" id="Gradient_yhj70"]
+offsets = PackedFloat32Array(0, 0.368421, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.972136, 0.972136, 0.972136, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_sg24t"]
+gradient = SubResource("Gradient_yhj70")
+width = 90
+height = 55
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.9, 0.5)
+
+[node name="Game" type="Node2D"]
+
+[node name="world" parent="." instance=ExtResource("1_is7pu")]
+light_mask = 3
+tileset = ExtResource("2_ook0a")
+level_generator = SubResource("Resource_cpro7")
+
+[node name="units" type="Node2D" parent="world"]
+y_sort_enabled = true
+
+[node name="player" parent="world/units" instance=ExtResource("2_433b0")]
+top_level = false
+y_sort_enabled = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world/units/player" node_paths=PackedStringArray("player")]
+script = ExtResource("3_dbkdh")
+player = NodePath("..")
+speed = 0.01
+
+[node name="Camera2D" type="Camera2D" parent="world/units/player/StaticBody2D"]
+
+[node name="ShadowLight" type="PointLight2D" parent="world/units/player"]
+z_index = -2
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(0, -20)
+shadow_enabled = true
+shadow_filter = 2
+shadow_filter_smooth = 0.5
+texture = ExtResource("4_r5jow")
+texture_scale = 0.5
+
+[node name="SpriteLight" type="PointLight2D" parent="world/units/player"]
+z_index = -2
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(0, -57)
+range_item_cull_mask = 2
+shadow_filter = 2
+shadow_filter_smooth = 2.0
+texture = SubResource("GradientTexture2D_ip8t1")
+
+[node name="PointLight2D" type="PointLight2D" parent="world/units/player"]
+position = Vector2(0, -6)
+blend_mode = 1
+texture = SubResource("GradientTexture2D_sg24t")
+
+[node name="effetcs" type="Node2D" parent="world"]
+y_sort_enabled = true
+
+[node name="lights" type="Node2D" parent="world"]
+y_sort_enabled = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="world/lights"]
+color = Color(0.0941176, 0.121569, 0.145098, 1)
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="HUD" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayerHPBar" parent="UI/HUD" instance=ExtResource("2_okq3f")]
+layout_mode = 1
+
+[node name="MiniMap" parent="UI/HUD" instance=ExtResource("6_d2vad")]
+layout_mode = 1
+
+[node name="MainMenu" type="Control" parent="UI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="UI/MainMenu"]
+layout_mode = 1
+offset_right = 93.0
+offset_bottom = 31.0
+text = "New Game"
+
+[node name="services" type="Node" parent="."]
+
+[node name="effect_spawner" type="Node" parent="services" node_paths=PackedStringArray("effects")]
+script = ExtResource("7_e54r4")
+effects = NodePath("../../world/effetcs")
+
+[node name="mob_spawner" type="Node" parent="services" node_paths=PackedStringArray("units")]
+script = ExtResource("8_w7wt4")
+units = NodePath("../../world/units")
+
+[connection signal="pressed" from="UI/MainMenu/Button" to="world" method="generate_map"]
