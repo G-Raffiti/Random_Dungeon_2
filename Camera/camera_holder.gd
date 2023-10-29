@@ -14,7 +14,7 @@ func _on_player_tree_exiting():
 
 func _physics_process(delta):
     if not follow: return
-    var destination = (get_global_mouse_position() - player.global_position) / 4 + player.global_position
+    var destination = (get_global_mouse_position() - player.global_position) / 10 + player.global_position
     var distance = (destination - global_position).length()
     global_position = global_position.move_toward(destination, delta * distance * distance * speed)
 

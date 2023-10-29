@@ -1,0 +1,75 @@
+[gd_scene load_steps=5 format=3 uid="uid://c1oef5morv1e4"]
+
+[ext_resource type="Script" path="res://UI/HUD/MiniMap/mini_map.gd" id="1_1rg5w"]
+[ext_resource type="TileSet" uid="uid://d02lamljw8dtd" path="res://UI/HUD/MiniMap/mini_map_tileset.tres" id="2_jhib1"]
+
+[sub_resource type="Gradient" id="Gradient_evm1f"]
+offsets = PackedFloat32Array(0.801858, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_eu433"]
+gradient = SubResource("Gradient_evm1f")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
+[node name="MiniMap" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_1rg5w")
+tileset = ExtResource("2_jhib1")
+zoom = 0.3
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.8
+anchor_right = 1.0
+anchor_bottom = 0.3
+offset_left = 0.375916
+grow_horizontal = 0
+mouse_filter = 0
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer"]
+clip_contents = true
+layout_mode = 2
+stretch = true
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer/SubViewportContainer"]
+disable_3d = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(230, 194)
+render_target_update_mode = 4
+
+[node name="TileMap" type="TileMap" parent="MarginContainer/SubViewportContainer/SubViewport"]
+tile_set = ExtResource("2_jhib1")
+format = 2
+layer_0/tile_data = PackedInt32Array(-65536, 196608, 3)
+
+[node name="PlayerMarker" type="Sprite2D" parent="MarginContainer/SubViewportContainer/SubViewport/TileMap"]
+self_modulate = Color(0.447059, 0.686275, 0, 1)
+position = Vector2(250, 250)
+texture = SubResource("GradientTexture2D_eu433")
+
+[node name="MobMarker" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(0.854902, 0.0313726, 0, 1)
+position = Vector2(-902, -398)
+texture = SubResource("GradientTexture2D_eu433")
+
+[node name="ExitMarker" type="Sprite2D" parent="."]
+visible = false
+self_modulate = Color(0.960784, 0.666667, 0, 1)
+position = Vector2(-902, -398)
+texture = SubResource("GradientTexture2D_eu433")
+
+[connection signal="gui_input" from="MarginContainer" to="." method="_on_gui_input"]
+[connection signal="mouse_entered" from="MarginContainer" to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer" to="." method="_on_mouse_exited"]
