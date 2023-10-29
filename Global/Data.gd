@@ -3,10 +3,10 @@ var rnd = RandomNumberGenerator.new()
 #const save = preload("res://Save/save.tres")
 
 # Monsters ---------------------------------------------------------------------
-#const bat = preload("res://Character/MOB/MOBs/bat.tscn")
+const orc_shaman: PackedScene = preload("res://Character/MOB/MOBs/orc_mage.tscn")
 #const alien = preload("res://Character/MOB/MOBs/alien.tscn")
 
-@onready var mobs = []
+@onready var mobs: Array[PackedScene] = [orc_shaman]
 
 # Objects ----------------------------------------------------------------------
 #const grass = preload("")

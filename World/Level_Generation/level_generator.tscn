@@ -5,7 +5,6 @@
 [node name="Level_Generator" type="Node2D"]
 y_sort_enabled = true
 script = ExtResource("1_crcvw")
-tile_size = null
 
 [node name="TileMap" type="TileMap" parent="."]
 y_sort_enabled = true

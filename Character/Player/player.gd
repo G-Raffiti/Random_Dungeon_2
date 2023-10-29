@@ -8,6 +8,8 @@ func _ready() -> void:
 	stats = PlayerData.stats
 	Event.player_level_up.connect(_on_level_up)
 	super._ready()
+	Event.player_ready.emit(self)
+	Event.player_teleport.connect(_on_teleport)
 
 func _on_take_hit(other_hitbox: Hitbox) -> void:
 	super._on_take_hit(other_hitbox)
@@ -19,6 +21,9 @@ func _on_die() -> void:
 
 func _physics_process(_delta):
 	target_direction = (get_global_mouse_position() - global_position).normalized()
+
+func _on_teleport(_position: Vector2) -> void:
+	global_position = _position
 
 #Animation
 func _on_level_up(_level):

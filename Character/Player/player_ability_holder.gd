@@ -11,8 +11,9 @@ func _ready():
 	super._ready()
 	for action in InputMap.get_actions():
 		if action.begins_with("ui") : continue
+		if not action.begins_with("ability_") : continue
 		if abilities.has(action) : continue
-		var ability: Ability = ability_ps.instance()
+		var ability: Ability = ability_ps.instantiate()
 		add_child(ability)
 		ability.ability_holder = self
 		ability.input_action = action

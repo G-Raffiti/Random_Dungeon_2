@@ -1,22 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cw0f6lrf6c16c"]
+[gd_scene load_steps=4 format=3 uid="uid://cw0f6lrf6c16c"]
 
 [ext_resource type="PackedScene" uid="uid://dl2mlqu6xhkfy" path="res://World/Level_Generation/level_generator.tscn" id="1_chg12"]
-[ext_resource type="TileSet" uid="uid://cej7f3l66xbo1" path="res://_Art/World/TileSet/Blobs/TileSetNature.tres" id="2_xvs8g"]
-[ext_resource type="Script" path="res://World/Level_Generation/level_generator.gd" id="3_n5keh"]
-
-[sub_resource type="Resource" id="Resource_pc2ls"]
-script = ExtResource("3_n5keh")
-type = 0
-steps = 350
-walkers = 1
-max_room_size = 7
-coridor_len = 5
-dencity_room = 10
+[ext_resource type="Script" path="res://World/Level_Generation/level_generation_service.gd" id="1_xe8d3"]
+[ext_resource type="Script" path="res://World/Level_Generation/level_mob_spawner.gd" id="3_fy0yn"]
 
 [node name="world" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_xe8d3")
 
-[node name="Level_Generator" parent="." instance=ExtResource("1_chg12")]
-tile_size = 128
-tileset = ExtResource("2_xvs8g")
-level_generator = SubResource("Resource_pc2ls")
+[node name="tile_map_generation" parent="." instance=ExtResource("1_chg12")]
+
+[node name="unit_generation" type="Node" parent="."]
+script = ExtResource("3_fy0yn")
