@@ -18,81 +18,81 @@ random Dungeon 2 offers a simple yet addictive dungeon-crawling experience. Clim
 ## Road Map (in no order of priority)
 finalized: ✔️✔️✔️, done: ✔️, in progress: 🔵,  to do: ❌
 - Player :
-    - Player Movement 2D Topdown or Isometric with WASD ✔️
-        - Animation 🔵
-    - Player Dash ❌
-    - Player Ability System 🔵
+	- Player Movement 2D Topdown or Isometric with WASD ✔️
+		- Animation ✔️
+	- Player Dash ❌
+	- Player Ability System 🔵
 
 - Mob Finite State Machin :
-    - IDLE ✔️✔️✔️
-    - WANDERING ✔️✔️✔️
-    - CHASING ✔️
-    - MELEE ATTACK ✔️
-    - RANGED ATTACK ❌
-    - FLEE ❌
-    - REGROUP ❌
-    - USE Special Ability ✔️
+	- IDLE ✔️✔️✔️
+	- WANDERING ✔️✔️✔️
+	- CHASING ✔️
+	- MELEE ATTACK ✔️
+	- RANGED ATTACK ❌
+	- FLEE ❌
+	- REGROUP ❌
+	- USE Special Ability ✔️
 
 - UI HUD :
-    - Player HP ✔️ / Energy ❌ / Mana ❌
-    - Mini map ❌
-    - Overlay Map ❌
-    - Skill bar / cooldown ❌
+	- Player HP ✔️ / Energy ❌ / Mana ❌
+	- Mini map ✔️
+	- Overlay Map ✔️
+	- Skill bar / cooldown ❌
 
 - UI Menus :
-    - Skill ❌
-    - Passive Skill Trees ❌
-    - Pause ❌
-    - Main Menu ❌
+	- Skill ❌
+	- Passive Skill Trees ❌
+	- Pause ❌
+	- Main Menu ❌
 
 - World :
-    - proceduraly generated Dungeon Tilemap based ✔️
-        - Spawn randomly placed Objets ❌
-        - MOB Spawner ❌
-        - Spawn Player in good spot ❌
-        - Spawn Exit Door ❌
-    - HUB ❌
-    - BOSS Fight ❌
+	- proceduraly generated Dungeon Tilemap based ✔️
+		- Spawn randomly placed Objets ❌
+		- MOB Spawner ✔️
+		- Spawn Player in good spot ✔️
+		- Spawn Exit Door ❌
+	- HUB ❌
+	- BOSS Fight ❌
 
 - Player Skills :
-    - Slash ❌
-        - move while attacking ❌
-        - multistrike ❌
-        - biger range ❌
-        - dash in direction ❌
-        - combo ❌
-        - add charge ❌ / reduce cooldown ❌ / add attack ❌
+	- Slash ❌
+		- move while attacking ❌
+		- multistrike ❌
+		- biger range ❌
+		- dash in direction ❌
+		- combo ❌
+		- add charge ❌ / reduce cooldown ❌ / add attack ❌
 
-    - Throw Stick ❌
-        - fork ❌
-        - rotate ❌
-        - pierce ❌
-        - orbite ❌
-        - explode ❌
-        - add charge ❌ / reduce cooldown ❌ / add attack ❌
+	- Throw Stick ❌
+		- fork ❌
+		- rotate ❌
+		- pierce ❌
+		- orbite ❌
+		- explode ❌
+		- add charge ❌ / reduce cooldown ❌ / add attack ❌
 
-    - Nova ❌
-        - increase Area of effect ❌
-        - echo ❌
-        - multi cast ❌
-        - cast on mouse ❌
-        - knockback ❌
-        - add charge ❌ / reduce cooldown ❌ / add attack ❌
+	- Nova ❌
+		- increase Area of effect ❌
+		- echo ❌
+		- multi cast ❌
+		- cast on mouse ❌
+		- knockback ❌
+		- add charge ❌ / reduce cooldown ❌ / add attack ❌
 
-    - Shuriken ❌
-        - add projectile ❌
-        - reduce angle ❌
-        - bounce ❌
-        - pierce ❌
-        - 1 Big Shuriken ❌
-        - add charge ❌ / reduce cooldown ❌ / add attack ❌
-    
-    - Dash ❌
-        - expolde at begining ❌ / end ❌
-        - disable hitbox ❌
-        - increase range ❌
-        - Damage on touching ❌
-        - add charge ❌ / reduce cooldown ❌
+	- Shuriken ❌
+		- add projectile ❌
+		- reduce angle ❌
+		- bounce ❌
+		- pierce ❌
+		- 1 Big Shuriken ❌
+		- add charge ❌ / reduce cooldown ❌ / add attack ❌
+	
+	- Dash ❌
+		- expolde at begining ❌ / end ❌
+		- disable hitbox ❌
+		- increase range ❌
+		- Damage on touching ❌
+		- add charge ❌ / reduce cooldown ❌
 
 ## Art
 
