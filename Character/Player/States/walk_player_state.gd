@@ -4,7 +4,8 @@ func get_state_name() -> StringName:
 	return 'WALK'
 
 func can_enter_state() -> bool:
-	return character.velocity != Vector2.ZERO
+	return state_machine.abilities.is_inactive() \
+	and character.velocity != Vector2.ZERO
 
 func enter_state() -> void:
 	character.set_anim('walk')
