@@ -63,7 +63,7 @@ func _on_mouse_entered():
 func _on_mouse_exited():
 	is_mouse_inside = false
 
-func _unhandled_input(event):
+func _input(event):
 	if event.is_action_pressed('map'):
 		if grown:
 			shrink()
