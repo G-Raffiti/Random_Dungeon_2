@@ -10,7 +10,7 @@ func initialize(_cell_size: int):
 func get_spawn_positions(_map: LevelGenerator.Map) -> Array[Vector2i]:
 	var spawn_pos: Array[Vector2i] = []
 	for cell in _map.level:
-		if randf() > 0.8:
+		if randf() > 0.9:
 			spawn_pos.append(cell)
 	return spawn_pos
 
