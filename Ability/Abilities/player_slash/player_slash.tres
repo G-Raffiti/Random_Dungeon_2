@@ -1,0 +1,20 @@
+[gd_resource type="Resource" load_steps=3 format=3 uid="uid://5ag6kiiwlv42"]
+
+[ext_resource type="Texture2D" uid="uid://c8dq8clflfm8s" path="res://Ability/Abilities/player_slash/player_slash.png" id="1_he8g1"]
+[ext_resource type="Script" path="res://Ability/Abilities/player_slash/player_slash.gd" id="2_8kn3e"]
+
+[resource]
+script = ExtResource("2_8kn3e")
+damage_value = 1
+damage_type = 0
+knockback_strenght = 120
+can_move = false
+multistrike = 0
+area_scale = Vector2(1, 1)
+ability_name = &"Slash"
+icon = ExtResource("1_he8g1")
+stay_active = false
+animation_time = 0.2
+cooldown_time = 0.5
+active_time = 0.2
+charge = 1
