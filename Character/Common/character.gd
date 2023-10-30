@@ -38,8 +38,9 @@ func _ready() -> void:
 	#init ability holder
 	ability_holder.initialize(self)
 	#init state machine
-	anim_tree.active = true
 	state_machine.initialize(ability_holder, self)
+	#init animation
+	anim_tree.active = true
 
 func _on_take_hit(other_hitbox: Hitbox) -> void:
 	movement.knockback(other_hitbox.get_knockback(hurtbox))
