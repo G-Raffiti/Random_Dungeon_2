@@ -12,3 +12,15 @@ class Damage:
 
 	func add(added_value: int):
 		value += added_value
+	
+	func str() -> String:
+		match (type):
+			Element.PHYS:
+				return str(value) + " physical damage"
+			Element.FIRE:
+				return str(value) + " fire damage"
+			Element.WATER:
+				return str(value) + " water damage"
+			Element.NATURE:
+				return str(value) + " nature damage"
+			_: return str(value) + " damage"

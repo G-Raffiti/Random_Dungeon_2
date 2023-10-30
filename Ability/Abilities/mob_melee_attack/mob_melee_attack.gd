@@ -30,7 +30,7 @@ func get_damage(user_damage: int) -> G.Damage:
 func get_description(user: Character) -> String:
 	var ret = super.get_description(user)
 	ret += "A Melee Attack in the target direction, deal damage on hit\n"
-	ret += "Damage = " + str(user.stats.damage_value + damage_value) + "of " + str(damage_type)
+	ret += "Damage = " + get_damage(user.stats.damage_value + damage_value).str()
 	if can_move : ret += "\n" + "can move while attacking"
 	return ret
 #EndRegion
