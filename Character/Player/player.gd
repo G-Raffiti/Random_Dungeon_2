@@ -3,6 +3,9 @@ extends Character
 
 @export var player_stats: PlayerStats
 
+@export_group('Sound & Anim Dependencies')
+@export var rotation_part: Node2D
+
 # CharacterController override
 func _ready() -> void:
 	stats = PlayerData.stats

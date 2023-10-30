@@ -207,12 +207,13 @@ states/walk/node = SubResource("AnimationNodeAnimation_8x581")
 states/walk/position = Vector2(686.716, 35.3333)
 transitions = ["RESET", "idle", SubResource("AnimationNodeStateMachineTransition_b4vtl"), "idle", "RESET", SubResource("AnimationNodeStateMachineTransition_7tk5f"), "Start", "idle", SubResource("AnimationNodeStateMachineTransition_tkvwp"), "idle", "walk", SubResource("AnimationNodeStateMachineTransition_lsrv3"), "walk", "idle", SubResource("AnimationNodeStateMachineTransition_4yjai")]
 
-[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("movement", "hurtbox", "hitbox", "ability_holder", "state_machine", "sound", "hit_sound", "hit_anim", "anim", "anim_tree", "sprites")]
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("rotation_part", "movement", "hurtbox", "hitbox", "ability_holder", "state_machine", "sound", "hit_sound", "hit_anim", "anim", "anim_tree", "sprites")]
 top_level = true
 collision_layer = 257
 collision_mask = 51
 script = ExtResource("1_q1xjo")
 player_stats = ExtResource("2_e6tyk")
+rotation_part = NodePath("sprites/rotation_part")
 movement = NodePath("movement")
 hurtbox = NodePath("hurtbox")
 hitbox = NodePath("hitbox")
@@ -273,11 +274,9 @@ script = ExtResource("6_r6r3x")
 
 [node name="inactive_state" type="Node2D" parent="state_machine"]
 script = ExtResource("9_opwty")
-state_priority = null
 
 [node name="idle_state" type="Node2D" parent="state_machine"]
 script = ExtResource("12_6livb")
-state_priority = null
 
 [node name="walk_state" type="Node2D" parent="state_machine"]
 script = ExtResource("14_agswa")
