@@ -55,10 +55,10 @@ finalized: ✔️✔️✔️, done: ✔️, in progress: 🔵,  to do: ❌
 	- BOSS Fight ❌
 
 - Player Skills :
-	- Slash ❌
-		- move while attacking ❌
-		- multistrike ❌
-		- biger range ❌
+	- Slash 🔵 animation ❌ script ✔️ resource 🔵
+		- move while attacking 🔵
+		- multistrike 🔵
+		- biger range 🔵
 		- dash in direction ❌
 		- combo ❌
 		- add charge ❌ / reduce cooldown ❌ / add attack ❌
