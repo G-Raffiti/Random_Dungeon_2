@@ -25,8 +25,8 @@ func process(_user : Character, _delta: float):
 func can_use(ability_holder: AbilityHolder) -> bool:
 	return ability_holder.is_inactive()
 
-func scale_animation_speed(user : Character, parameter):
-	var ratio = animation_time / active_time
+func scale_animation_speed(user : Character, parameter, _active_time: float = active_time):
+	var ratio = animation_time / _active_time
 	user.anim_tree.set(parameter, ratio)
 
 func scale_animation_speed_back(user: Character, parameter):
