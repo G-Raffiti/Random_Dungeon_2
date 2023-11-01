@@ -1,0 +1,150 @@
+{
+    "name": "Undead",
+    "nodes": [
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "RightBackFoot",
+            "node_path": "RightBackFoot",
+            "offset": [
+                -129.5,
+                95.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                43,
+                122
+            ],
+            "resource_path": "export\\Big_Mounts\\Undead\\RightBackFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -4
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "RightFrontFoot",
+            "node_path": "RightFrontFoot",
+            "offset": [
+                -129.5,
+                95.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                138,
+                107
+            ],
+            "resource_path": "export\\Big_Mounts\\Undead\\RightFrontFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -3
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Body",
+            "node_path": "Body",
+            "offset": [
+                -129.5,
+                95.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                0,
+                0
+            ],
+            "resource_path": "export\\Big_Mounts\\Undead\\Body.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -2
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "LeftBackFoot",
+            "node_path": "LeftBackFoot",
+            "offset": [
+                -129.5,
+                95.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                91,
+                118
+            ],
+            "resource_path": "export\\Big_Mounts\\Undead\\LeftBackFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -1
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "LeftFrontFoot",
+            "node_path": "LeftFrontFoot",
+            "offset": [
+                -129.5,
+                95.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                159,
+                108
+            ],
+            "resource_path": "export\\Big_Mounts\\Undead\\LeftFrontFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": 0
+        }
+    ]
+}

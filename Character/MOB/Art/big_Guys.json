@@ -1,0 +1,295 @@
+{
+    "name": "big_Guys",
+    "nodes": [
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Drake",
+            "node_path": "Drake",
+            "offset": [
+                -1253.5,
+                132.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                2302,
+                1
+            ],
+            "resource_path": "export\\big_Guys\\Drake.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -9
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Nature",
+            "node_path": "Nature",
+            "offset": [
+                -1253.5,
+                132.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                2071,
+                0
+            ],
+            "resource_path": "export\\big_Guys\\Nature.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -8
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Human",
+            "node_path": "Human",
+            "offset": [
+                -1253.5,
+                132.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1851,
+                15
+            ],
+            "resource_path": "export\\big_Guys\\Human.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -7
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Cloud",
+            "node_path": "Cloud",
+            "offset": [
+                -1253.5,
+                132.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1626,
+                9
+            ],
+            "resource_path": "export\\big_Guys\\Cloud.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -6
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Armor",
+            "node_path": "Armor",
+            "offset": [
+                -1253.5,
+                132.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1424,
+                17
+            ],
+            "resource_path": "export\\big_Guys\\Armor.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -5
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Pig",
+            "node_path": "Pig",
+            "offset": [
+                -1253.5,
+                132.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1190,
+                23
+            ],
+            "resource_path": "export\\big_Guys\\Pig.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -4
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Undead",
+            "node_path": "Undead",
+            "offset": [
+                -1253.5,
+                132.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                906,
+                37
+            ],
+            "resource_path": "export\\big_Guys\\Undead.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -3
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Lezard",
+            "node_path": "Lezard",
+            "offset": [
+                -1253.5,
+                132.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                638,
+                40
+            ],
+            "resource_path": "export\\big_Guys\\Lezard.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -2
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Tek",
+            "node_path": "Tek",
+            "offset": [
+                -1253.5,
+                132.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                360,
+                55
+            ],
+            "resource_path": "export\\big_Guys\\Tek.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -1
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Orc",
+            "node_path": "Orc",
+            "offset": [
+                -1253.5,
+                132.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                0,
+                52
+            ],
+            "resource_path": "export\\big_Guys\\Orc.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": 0
+        }
+    ]
+}

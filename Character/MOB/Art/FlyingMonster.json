@@ -1,0 +1,295 @@
+{
+    "name": "FlyingMonster",
+    "nodes": [
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Drake",
+            "node_path": "Drake",
+            "offset": [
+                -1178.0,
+                98.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                2175,
+                50
+            ],
+            "resource_path": "export\\FlyingMonster\\Drake.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -9
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Orc",
+            "node_path": "Orc",
+            "offset": [
+                -1178.0,
+                98.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                0,
+                31
+            ],
+            "resource_path": "export\\FlyingMonster\\Orc.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -8
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Nature",
+            "node_path": "Nature",
+            "offset": [
+                -1178.0,
+                98.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1946,
+                0
+            ],
+            "resource_path": "export\\FlyingMonster\\Nature.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -7
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Cloud",
+            "node_path": "Cloud",
+            "offset": [
+                -1178.0,
+                98.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1503,
+                22
+            ],
+            "resource_path": "export\\FlyingMonster\\Cloud.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -6
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Armor",
+            "node_path": "Armor",
+            "offset": [
+                -1178.0,
+                98.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1256,
+                22
+            ],
+            "resource_path": "export\\FlyingMonster\\Armor.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -5
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Pig",
+            "node_path": "Pig",
+            "offset": [
+                -1178.0,
+                98.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1015,
+                12
+            ],
+            "resource_path": "export\\FlyingMonster\\Pig.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -4
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Undead",
+            "node_path": "Undead",
+            "offset": [
+                -1178.0,
+                98.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                757,
+                8
+            ],
+            "resource_path": "export\\FlyingMonster\\Undead.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -3
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Tek",
+            "node_path": "Tek",
+            "offset": [
+                -1178.0,
+                98.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                270,
+                16
+            ],
+            "resource_path": "export\\FlyingMonster\\Tek.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -2
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Human",
+            "node_path": "Human",
+            "offset": [
+                -1178.0,
+                98.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1756,
+                27
+            ],
+            "resource_path": "export\\FlyingMonster\\Human.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -1
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Lezard",
+            "node_path": "Lezard",
+            "offset": [
+                -1178.0,
+                98.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                548,
+                10
+            ],
+            "resource_path": "export\\FlyingMonster\\Lezard.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": 0
+        }
+    ]
+}

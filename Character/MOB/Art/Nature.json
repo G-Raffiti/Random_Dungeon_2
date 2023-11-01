@@ -1,0 +1,150 @@
+{
+    "name": "Nature",
+    "nodes": [
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "RightBackFoot",
+            "node_path": "RightBackFoot",
+            "offset": [
+                -98.0,
+                121.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                17,
+                187
+            ],
+            "resource_path": "export\\Big_Mounts\\Nature\\RightBackFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -4
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "RightFrontFoot",
+            "node_path": "RightFrontFoot",
+            "offset": [
+                -98.0,
+                121.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                93,
+                171
+            ],
+            "resource_path": "export\\Big_Mounts\\Nature\\RightFrontFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -3
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Body",
+            "node_path": "Body",
+            "offset": [
+                -98.0,
+                121.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                0,
+                0
+            ],
+            "resource_path": "export\\Big_Mounts\\Nature\\Body.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -2
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "LeftBackFoot",
+            "node_path": "LeftBackFoot",
+            "offset": [
+                -98.0,
+                121.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                69,
+                191
+            ],
+            "resource_path": "export\\Big_Mounts\\Nature\\LeftBackFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -1
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "LeftFrontFoot",
+            "node_path": "LeftFrontFoot",
+            "offset": [
+                -98.0,
+                121.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                127,
+                183
+            ],
+            "resource_path": "export\\Big_Mounts\\Nature\\LeftFrontFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": 0
+        }
+    ]
+}

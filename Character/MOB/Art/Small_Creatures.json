@@ -1,0 +1,295 @@
+{
+    "name": "Small_Creatures",
+    "nodes": [
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Drake",
+            "node_path": "Drake",
+            "offset": [
+                -1173.0,
+                59.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                2240,
+                17
+            ],
+            "resource_path": "export\\Small_Creatures\\Drake.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -9
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Nature",
+            "node_path": "Nature",
+            "offset": [
+                -1173.0,
+                59.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1993,
+                27
+            ],
+            "resource_path": "export\\Small_Creatures\\Nature.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -8
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Human",
+            "node_path": "Human",
+            "offset": [
+                -1173.0,
+                59.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1789,
+                10
+            ],
+            "resource_path": "export\\Small_Creatures\\Human.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -7
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Cloud",
+            "node_path": "Cloud",
+            "offset": [
+                -1173.0,
+                59.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1565,
+                15
+            ],
+            "resource_path": "export\\Small_Creatures\\Cloud.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -6
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Armor",
+            "node_path": "Armor",
+            "offset": [
+                -1173.0,
+                59.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1323,
+                0
+            ],
+            "resource_path": "export\\Small_Creatures\\Armor.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -5
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Pig",
+            "node_path": "Pig",
+            "offset": [
+                -1173.0,
+                59.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1091,
+                10
+            ],
+            "resource_path": "export\\Small_Creatures\\Pig.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -4
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Undead",
+            "node_path": "Undead",
+            "offset": [
+                -1173.0,
+                59.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                824,
+                20
+            ],
+            "resource_path": "export\\Small_Creatures\\Undead.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -3
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Lezard",
+            "node_path": "Lezard",
+            "offset": [
+                -1173.0,
+                59.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                553,
+                19
+            ],
+            "resource_path": "export\\Small_Creatures\\Lezard.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -2
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Tek",
+            "node_path": "Tek",
+            "offset": [
+                -1173.0,
+                59.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                294,
+                27
+            ],
+            "resource_path": "export\\Small_Creatures\\Tek.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -1
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Orc",
+            "node_path": "Orc",
+            "offset": [
+                -1173.0,
+                59.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                0,
+                26
+            ],
+            "resource_path": "export\\Small_Creatures\\Orc.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": 0
+        }
+    ]
+}

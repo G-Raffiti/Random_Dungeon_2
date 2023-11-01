@@ -1,8 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://5uig7h8xdm4h"]
+[gd_scene load_steps=10 format=3 uid="uid://5uig7h8xdm4h"]
 
 [ext_resource type="PackedScene" uid="uid://djn5m6ipdpvod" path="res://Character/MOB/mob.tscn" id="1_c7mnu"]
 [ext_resource type="Script" path="res://Character/MOB/mob_stats.gd" id="2_vabu1"]
+[ext_resource type="Texture2D" uid="uid://cw7ouxbtf2jj1" path="res://Character/MOB/Art/export/Mage/Orc/RightArm.png" id="4_ya0lq"]
+[ext_resource type="Texture2D" uid="uid://ct6us0rq5bqpg" path="res://Character/MOB/Art/export/Mage/Orc/Body.png" id="5_7fig7"]
 [ext_resource type="Shader" path="res://Character/MOB/mob_shader.gdshader" id="5_rlvn6"]
+[ext_resource type="Texture2D" uid="uid://db1368u6h0lki" path="res://Character/MOB/Art/export/Mage/Orc/LeftArm.png" id="6_bwnd3"]
+[ext_resource type="Texture2D" uid="uid://c8dinoqafruak" path="res://Character/MOB/Art/export/Mage/Orc/Head.png" id="7_f1k2n"]
 
 [sub_resource type="Resource" id="Resource_h3w2v"]
 resource_local_to_scene = true
@@ -24,8 +28,24 @@ shader_parameter/color = Color(0.670588, 0, 0, 1)
 shader_parameter/progress = 0.0
 
 [node name="orc_mage" instance=ExtResource("1_c7mnu")]
-scale = Vector2(0.5, 0.5)
 mob_stats = SubResource("Resource_h3w2v")
 
 [node name="AnimPart" parent="sprites" index="0"]
 material = SubResource("ShaderMaterial_s10h4")
+
+[node name="arm_r" parent="sprites/AnimPart" index="0"]
+position = Vector2(-44.4525, -52.0203)
+texture = ExtResource("4_ya0lq")
+region_enabled = false
+
+[node name="body" parent="sprites/AnimPart" index="1"]
+texture = ExtResource("5_7fig7")
+region_enabled = false
+
+[node name="arm_l" parent="sprites/AnimPart" index="2"]
+texture = ExtResource("6_bwnd3")
+region_enabled = false
+
+[node name="head" parent="sprites/AnimPart" index="3"]
+texture = ExtResource("7_f1k2n")
+region_enabled = false

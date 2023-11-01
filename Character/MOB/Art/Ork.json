@@ -1,0 +1,92 @@
+{
+    "name": "Ork",
+    "nodes": [
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "RightWing",
+            "node_path": "RightWing",
+            "offset": [
+                -101.5,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                0,
+                13
+            ],
+            "resource_path": "export\\Big_Fly\\Ork\\RightWing.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -2
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Body",
+            "node_path": "Body",
+            "offset": [
+                -101.5,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                26,
+                0
+            ],
+            "resource_path": "export\\Big_Fly\\Ork\\Body.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -1
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "LeftWing",
+            "node_path": "LeftWing",
+            "offset": [
+                -101.5,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                127,
+                39
+            ],
+            "resource_path": "export\\Big_Fly\\Ork\\LeftWing.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": 0
+        }
+    ]
+}

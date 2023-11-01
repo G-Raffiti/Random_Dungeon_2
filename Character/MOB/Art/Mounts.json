@@ -1,0 +1,295 @@
+{
+    "name": "Mounts",
+    "nodes": [
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Drake",
+            "node_path": "Drake",
+            "offset": [
+                -1190.0,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                2189,
+                13
+            ],
+            "resource_path": "export\\Mounts\\Drake.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -9
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Nature",
+            "node_path": "Nature",
+            "offset": [
+                -1190.0,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1985,
+                11
+            ],
+            "resource_path": "export\\Mounts\\Nature.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -8
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Undead",
+            "node_path": "Undead",
+            "offset": [
+                -1190.0,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                791,
+                31
+            ],
+            "resource_path": "export\\Mounts\\Undead.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -7
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Cloud",
+            "node_path": "Cloud",
+            "offset": [
+                -1190.0,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1516,
+                4
+            ],
+            "resource_path": "export\\Mounts\\Cloud.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -6
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Armor",
+            "node_path": "Armor",
+            "offset": [
+                -1190.0,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1289,
+                0
+            ],
+            "resource_path": "export\\Mounts\\Armor.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -5
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Pig",
+            "node_path": "Pig",
+            "offset": [
+                -1190.0,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1045,
+                17
+            ],
+            "resource_path": "export\\Mounts\\Pig.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -4
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Human",
+            "node_path": "Human",
+            "offset": [
+                -1190.0,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1766,
+                4
+            ],
+            "resource_path": "export\\Mounts\\Human.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -3
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Lezard",
+            "node_path": "Lezard",
+            "offset": [
+                -1190.0,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                501,
+                16
+            ],
+            "resource_path": "export\\Mounts\\Lezard.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -2
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Tek",
+            "node_path": "Tek",
+            "offset": [
+                -1190.0,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                255,
+                15
+            ],
+            "resource_path": "export\\Mounts\\Tek.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -1
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Orc",
+            "node_path": "Orc",
+            "offset": [
+                -1190.0,
+                82.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                0,
+                12
+            ],
+            "resource_path": "export\\Mounts\\Orc.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": 0
+        }
+    ]
+}

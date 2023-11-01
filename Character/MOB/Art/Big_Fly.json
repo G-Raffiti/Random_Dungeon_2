@@ -1,0 +1,295 @@
+{
+    "name": "Big_Fly",
+    "nodes": [
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Drake",
+            "node_path": "Drake",
+            "offset": [
+                -1200.5,
+                99.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                2201,
+                35
+            ],
+            "resource_path": "export\\Big_Fly\\Drake.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -9
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Nature",
+            "node_path": "Nature",
+            "offset": [
+                -1200.5,
+                99.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                2011,
+                26
+            ],
+            "resource_path": "export\\Big_Fly\\Nature.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -8
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Human",
+            "node_path": "Human",
+            "offset": [
+                -1200.5,
+                99.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1805,
+                51
+            ],
+            "resource_path": "export\\Big_Fly\\Human.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -7
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Cloud",
+            "node_path": "Cloud",
+            "offset": [
+                -1200.5,
+                99.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1598,
+                46
+            ],
+            "resource_path": "export\\Big_Fly\\Cloud.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -6
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Armor",
+            "node_path": "Armor",
+            "offset": [
+                -1200.5,
+                99.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1289,
+                48
+            ],
+            "resource_path": "export\\Big_Fly\\Armor.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -5
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Pig",
+            "node_path": "Pig",
+            "offset": [
+                -1200.5,
+                99.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                1083,
+                0
+            ],
+            "resource_path": "export\\Big_Fly\\Pig.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -4
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Undead",
+            "node_path": "Undead",
+            "offset": [
+                -1200.5,
+                99.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                842,
+                20
+            ],
+            "resource_path": "export\\Big_Fly\\Undead.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -3
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Lezard",
+            "node_path": "Lezard",
+            "offset": [
+                -1200.5,
+                99.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                588,
+                39
+            ],
+            "resource_path": "export\\Big_Fly\\Lezard.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -2
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Tek",
+            "node_path": "Tek",
+            "offset": [
+                -1200.5,
+                99.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                284,
+                20
+            ],
+            "resource_path": "export\\Big_Fly\\Tek.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -1
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Ork",
+            "node_path": "Ork",
+            "offset": [
+                -1200.5,
+                99.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                0,
+                34
+            ],
+            "resource_path": "export\\Big_Fly\\Ork.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": 0
+        }
+    ]
+}

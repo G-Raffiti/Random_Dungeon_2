@@ -1,0 +1,150 @@
+{
+    "name": "Armor",
+    "nodes": [
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "RightBackFoot",
+            "node_path": "RightBackFoot",
+            "offset": [
+                -99.0,
+                105.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                20,
+                121
+            ],
+            "resource_path": "export\\Big_Mounts\\Armor\\RightBackFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -4
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "RightFrontFoot",
+            "node_path": "RightFrontFoot",
+            "offset": [
+                -99.0,
+                105.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                96,
+                105
+            ],
+            "resource_path": "export\\Big_Mounts\\Armor\\RightFrontFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -3
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Body",
+            "node_path": "Body",
+            "offset": [
+                -99.0,
+                105.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                0,
+                0
+            ],
+            "resource_path": "export\\Big_Mounts\\Armor\\Body.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -2
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "LeftBackFoot",
+            "node_path": "LeftBackFoot",
+            "offset": [
+                -99.0,
+                105.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                72,
+                125
+            ],
+            "resource_path": "export\\Big_Mounts\\Armor\\LeftBackFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -1
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "LeftFrontFoot",
+            "node_path": "LeftFrontFoot",
+            "offset": [
+                -99.0,
+                105.5
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                130,
+                117
+            ],
+            "resource_path": "export\\Big_Mounts\\Armor\\LeftFrontFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": 0
+        }
+    ]
+}

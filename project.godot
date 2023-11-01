@@ -78,5 +78,6 @@ map={
 
 [rendering]
 
-anti_aliasing/quality/msaa_2d=2
+anti_aliasing/quality/msaa_2d=3
 viewport/transparent_background=true
+lights_and_shadows/positional_shadow/atlas_quadrant_2_subdiv=6

@@ -1,0 +1,150 @@
+{
+    "name": "Human",
+    "nodes": [
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "RightBackFoot",
+            "node_path": "RightBackFoot",
+            "offset": [
+                -96.5,
+                86.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                0,
+                101
+            ],
+            "resource_path": "export\\Big_Mounts\\Human\\RightBackFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -4
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "RightFrontFoot",
+            "node_path": "RightFrontFoot",
+            "offset": [
+                -96.5,
+                86.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                76,
+                85
+            ],
+            "resource_path": "export\\Big_Mounts\\Human\\RightFrontFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -3
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "Body",
+            "node_path": "Body",
+            "offset": [
+                -96.5,
+                86.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                0,
+                0
+            ],
+            "resource_path": "export\\Big_Mounts\\Human\\Body.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -2
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "LeftBackFoot",
+            "node_path": "LeftBackFoot",
+            "offset": [
+                -96.5,
+                86.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                52,
+                105
+            ],
+            "resource_path": "export\\Big_Mounts\\Human\\LeftBackFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": -1
+        },
+        {
+            "children": [],
+            "frame_index": 0,
+            "name": "LeftFrontFoot",
+            "node_path": "LeftFrontFoot",
+            "offset": [
+                -96.5,
+                86.0
+            ],
+            "opacity": 1.0,
+            "pivot_offset": [
+                0.0,
+                0.0
+            ],
+            "position": [
+                110,
+                97
+            ],
+            "resource_path": "export\\Big_Mounts\\Human\\LeftFrontFoot.png",
+            "rotation": 0.0,
+            "scale": [
+                1.0,
+                1.0
+            ],
+            "tiles_x": 1,
+            "tiles_y": 1,
+            "type": "SPRITE",
+            "z": 0
+        }
+    ]
+}
