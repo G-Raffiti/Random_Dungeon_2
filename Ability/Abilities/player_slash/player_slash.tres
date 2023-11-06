@@ -1,7 +1,188 @@
-[gd_resource type="Resource" load_steps=3 format=3 uid="uid://5ag6kiiwlv42"]
+[gd_resource type="Resource" load_steps=13 format=3 uid="uid://5ag6kiiwlv42"]
 
 [ext_resource type="Texture2D" uid="uid://c8dq8clflfm8s" path="res://Ability/Abilities/player_slash/player_slash.png" id="1_he8g1"]
 [ext_resource type="Script" path="res://Ability/Abilities/player_slash/player_slash.gd" id="2_8kn3e"]
+[ext_resource type="Script" path="res://Ability/Skill_Tree/upgrade.gd" id="3_441sf"]
+
+[sub_resource type="Resource" id="Resource_1oced"]
+script = ExtResource("3_441sf")
+rarity = 0
+stats = {
+"active_time": 0.0,
+"animation_time": 0.0,
+"area_scale": Vector2(0, 0),
+"can_move": false,
+"charge": 0,
+"cooldown_time": 0.0,
+"damage_type": 0,
+"damage_value": 1,
+"knockback_strenght": 0,
+"multistrike": 0,
+"stay_active": false
+}
+name = "Stronger"
+description = "damage (+1)"
+icon = ExtResource("1_he8g1")
+
+[sub_resource type="Resource" id="Resource_vd8gk"]
+script = ExtResource("3_441sf")
+rarity = 0
+stats = {
+"active_time": -0.1,
+"animation_time": 0.0,
+"area_scale": Vector2(0, 0),
+"can_move": false,
+"charge": 0,
+"cooldown_time": 0.0,
+"damage_type": 0,
+"damage_value": 0,
+"knockback_strenght": 0,
+"multistrike": 0,
+"stay_active": false
+}
+name = "Faster"
+description = "attack speed (-0.1s)"
+icon = ExtResource("1_he8g1")
+
+[sub_resource type="Resource" id="Resource_opteh"]
+script = ExtResource("3_441sf")
+rarity = 2
+stats = {
+"active_time": 0.0,
+"animation_time": 0.0,
+"area_scale": Vector2(0, 0),
+"can_move": false,
+"charge": 0,
+"cooldown_time": 1.0,
+"damage_type": 0,
+"damage_value": 0,
+"knockback_strenght": 0,
+"multistrike": 2,
+"stay_active": false
+}
+name = "Multi Strike"
+description = "attack 2 more times but Cooldown +1s"
+icon = ExtResource("1_he8g1")
+
+[sub_resource type="Resource" id="Resource_narcs"]
+script = ExtResource("3_441sf")
+rarity = 2
+stats = {
+"active_time": 0.0,
+"animation_time": 0.0,
+"area_scale": Vector2(0, 0),
+"can_move": true,
+"charge": 0,
+"cooldown_time": 0.0,
+"damage_type": 0,
+"damage_value": 0,
+"knockback_strenght": 0,
+"multistrike": 0,
+"stay_active": false
+}
+name = "In Motion"
+description = "can move while attacking"
+icon = ExtResource("1_he8g1")
+
+[sub_resource type="Resource" id="Resource_xtq6c"]
+script = ExtResource("3_441sf")
+rarity = 1
+stats = {
+"active_time": 0.0,
+"animation_time": 0.0,
+"area_scale": Vector2(0, 0),
+"can_move": false,
+"charge": 2,
+"cooldown_time": 0.5,
+"damage_type": 0,
+"damage_value": 0,
+"knockback_strenght": 0,
+"multistrike": 0,
+"stay_active": false
+}
+name = "Charged"
+description = "Charge (+2) Cooldown (+0.5)"
+icon = ExtResource("1_he8g1")
+
+[sub_resource type="Resource" id="Resource_m5xmk"]
+script = ExtResource("3_441sf")
+rarity = 0
+stats = {
+"active_time": 0.0,
+"animation_time": 0.0,
+"area_scale": Vector2(0, 0),
+"can_move": false,
+"charge": 0,
+"cooldown_time": 0.0,
+"damage_type": 0,
+"damage_value": 1,
+"knockback_strenght": 120,
+"multistrike": 0,
+"stay_active": false
+}
+name = "Heavy Strike"
+description = "damage (+1), knockback (+120)"
+icon = ExtResource("1_he8g1")
+
+[sub_resource type="Resource" id="Resource_qbvyg"]
+script = ExtResource("3_441sf")
+rarity = 1
+stats = {
+"active_time": 0.1,
+"animation_time": 0.0,
+"area_scale": Vector2(0, 0),
+"can_move": false,
+"charge": 0,
+"cooldown_time": 0.0,
+"damage_type": 0,
+"damage_value": 2,
+"knockback_strenght": 0,
+"multistrike": 0,
+"stay_active": false
+}
+name = "Hard Strike"
+description = "damage (+2), attack speed (+0.1s)"
+icon = ExtResource("1_he8g1")
+
+[sub_resource type="Resource" id="Resource_jvk2o"]
+script = ExtResource("3_441sf")
+rarity = 1
+stats = {
+"active_time": 0.0,
+"animation_time": 0.0,
+"area_scale": Vector2(0.3, 0.3),
+"can_move": false,
+"charge": 0,
+"cooldown_time": 0.0,
+"damage_type": 0,
+"damage_value": 0,
+"knockback_strenght": 0,
+"multistrike": 0,
+"stay_active": false
+}
+name = "Large Area"
+description = "damage area (+30%)"
+icon = ExtResource("1_he8g1")
+
+[sub_resource type="Resource" id="Resource_ohg6o"]
+script = ExtResource("3_441sf")
+rarity = 2
+stats = {
+"active_time": 0.0,
+"animation_time": 0.0,
+"area_scale": Vector2(-0.2, 0.7),
+"can_move": false,
+"charge": 0,
+"cooldown_time": 0.0,
+"damage_type": 0,
+"damage_value": 0,
+"knockback_strenght": 0,
+"multistrike": 0,
+"stay_active": false
+}
+name = "Line Damage"
+description = "damage area (+70%) in line"
+icon = ExtResource("1_he8g1")
 
 [resource]
 script = ExtResource("2_8kn3e")
@@ -11,11 +192,13 @@ knockback_strenght = 120
 can_move = false
 multistrike = 0
 area_scale = Vector2(1, 1)
+ups = Array[StringName]([&"knockback_strenght", &"damage_value", &"multistrike", &"area_scale", &"can_move", &"damage_type", &"charge", &"active_time", &"cooldown", &"dash"])
 ability_name = &"Slash"
 icon = ExtResource("1_he8g1")
 anim_name = &"ability_slash"
 stay_active = false
 animation_time = 0.64
 cooldown_time = 0.0
-active_time = 0.3
+active_time = 0.5
 charge = 1
+upgrades = Array[ExtResource("3_441sf")]([SubResource("Resource_1oced"), SubResource("Resource_vd8gk"), SubResource("Resource_opteh"), SubResource("Resource_narcs"), SubResource("Resource_xtq6c"), SubResource("Resource_m5xmk"), SubResource("Resource_qbvyg"), SubResource("Resource_jvk2o"), SubResource("Resource_ohg6o")])
