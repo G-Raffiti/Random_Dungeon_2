@@ -1,0 +1,228 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7h4c0t0sptcv"]
+
+[ext_resource type="Script" path="res://UI/Menus/Drag_Drop_System/inventory_slot.gd" id="1_go16o"]
+[ext_resource type="Script" path="res://UI/Menus/Ability_Inventory/ability_inventory_ui.gd" id="1_ucnjv"]
+[ext_resource type="Texture2D" uid="uid://c6qsevvshem8j" path="res://_Art/Icons/left-click.png" id="2_g7mwh"]
+[ext_resource type="Texture2D" uid="uid://mgc5dha512qs" path="res://_Art/Icons/right-click.png" id="3_mjsy2"]
+
+[node name="AbilityInventory" type="PanelContainer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -178.0
+offset_top = -221.0
+offset_right = 178.0
+offset_bottom = 221.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ucnjv")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="reserve" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+columns = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer3" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer4" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer5" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer6" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer7" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer8" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer9" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer10" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer11" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer12" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer13" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer14" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="PanelContainer15" type="PanelContainer" parent="MarginContainer/VBoxContainer/reserve"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="ActiveSkill" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="main_skill" type="PanelContainer" parent="MarginContainer/VBoxContainer/ActiveSkill"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ActiveSkill"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActiveSkill/VBoxContainer"]
+layout_mode = 2
+text = "Main Skill"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/ActiveSkill/VBoxContainer"]
+layout_mode = 2
+text = "description
+"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/ActiveSkill"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("2_g7mwh")
+expand_mode = 3
+stretch_mode = 5
+metadata/flex_metas = {
+"align_self": 0
+}
+
+[node name="ActiveSkill3" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="secondary_skill" type="PanelContainer" parent="MarginContainer/VBoxContainer/ActiveSkill3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ActiveSkill3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActiveSkill3/VBoxContainer"]
+layout_mode = 2
+text = "Secondary Skill"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/ActiveSkill3/VBoxContainer"]
+layout_mode = 2
+text = "description
+"
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/ActiveSkill3"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+texture = ExtResource("3_mjsy2")
+expand_mode = 3
+stretch_mode = 5
+metadata/flex_metas = {
+"align_self": 0
+}
+
+[node name="ActiveSkill2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+
+[node name="movement_skill" type="PanelContainer" parent="MarginContainer/VBoxContainer/ActiveSkill2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+script = ExtResource("1_go16o")
+type = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/ActiveSkill2"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/ActiveSkill2/VBoxContainer"]
+layout_mode = 2
+text = "Movement Skill"
+
+[node name="Label2" type="Label" parent="MarginContainer/VBoxContainer/ActiveSkill2/VBoxContainer"]
+layout_mode = 2
+text = "description
+"
+
+[node name="TextureRect" type="Label" parent="MarginContainer/VBoxContainer/ActiveSkill2"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+text = "SPACE"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/flex_metas = {
+"align_self": 0
+}
