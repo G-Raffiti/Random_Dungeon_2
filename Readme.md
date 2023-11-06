@@ -22,6 +22,10 @@ finalized: ✔️✔️✔️, done: ✔️, in progress: 🔵,  to do: ❌
 		- Animation ✔️
 	- Player Dash ❌
 	- Player Ability System 🔵
+		- Use Ability ✔️
+		- Change Ability ✔️
+		- Upgrade Ability ❌
+		- Create Ability Tree ❌
 
 - Mob Finite State Machin :
 	- IDLE ✔️✔️✔️
@@ -36,11 +40,12 @@ finalized: ✔️✔️✔️, done: ✔️, in progress: 🔵,  to do: ❌
 - UI HUD :
 	- Player HP ✔️ / Energy ❌ / Mana ❌
 	- Mini map ✔️
+		- Add monster ❌
 	- Overlay Map ✔️
 	- Skill bar / cooldown ❌
 
 - UI Menus :
-	- Skill ❌
+	- Skill ✔️
 	- Passive Skill Trees ❌
 	- Pause ❌
 	- Main Menu ❌
@@ -55,7 +60,7 @@ finalized: ✔️✔️✔️, done: ✔️, in progress: 🔵,  to do: ❌
 	- BOSS Fight ❌
 
 - Player Skills :
-	- Slash 🔵 animation ❌ script ✔️ resource 🔵
+	- Slash 🔵 animation ✔️ script ✔️ resource ✔️
 		- move while attacking 🔵
 		- multistrike 🔵
 		- biger range 🔵
