@@ -21,12 +21,12 @@ const orc_shaman: PackedScene = preload("res://Character/MOB/MOBs/orc_mage.tscn"
 const ability_ps: PackedScene = preload("res://Ability/ability.tscn")
 #const ability_ui_ps = preload("")
 
-#const attack_resource: Ability_Ressource = preload("res://Ability/Abilities/Attack/attack_resource.tres")
-#const dash_resource: Ability_Ressource = preload("res://Ability/Abilities/Dash/dash_resource.tres")
-#const hook_resource: Ability_Ressource = preload("res://Ability/Abilities/Hook/hook_resource.tres")
-#const nova_resource: Ability_Ressource = preload("res://Ability/Abilities/Nova/nova_resoure.tres")
-#const shuriken_resource: Ability_Ressource = preload("res://Ability/Abilities/Shuriken/shuriken_resource.tres")
-#const throw_stick_resource: Ability_Ressource = preload("res://Ability/Abilities/Stick/stick_resource.tres")
+const slash: Ability_Resource = preload("res://Ability/Abilities/player_slash/player_slash.tres")
+#const dash_resource: Ability_Resource = preload("res://Ability/Abilities/Dash/dash_resource.tres")
+#const hook_resource: Ability_Resource = preload("res://Ability/Abilities/Hook/hook_resource.tres")
+#const nova_resource: Ability_Resource = preload("res://Ability/Abilities/Nova/nova_resoure.tres")
+#const shuriken_resource: Ability_Resource = preload("res://Ability/Abilities/Shuriken/shuriken_resource.tres")
+#const throw_stick_resource: Ability_Resource = preload("res://Ability/Abilities/Stick/stick_resource.tres")
 
 @onready var abilities: Array[Ability_Resource] = []
 

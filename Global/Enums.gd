@@ -13,7 +13,7 @@ class Damage:
 	func add(added_value: int):
 		value += added_value
 	
-	func str() -> String:
+	func to_str() -> String:
 		match (type):
 			Element.PHYS:
 				return str(value) + " physical damage"
