@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://dnnd0jjms23ot"]
+
+[ext_resource type="Script" path="res://Ability/Skill_Tree/UpgradeGenerator.gd" id="1_oiiaw"]
+[ext_resource type="Resource" uid="uid://5ag6kiiwlv42" path="res://Ability/Abilities/player_slash/player_slash.tres" id="2_l4vas"]
+[ext_resource type="Texture2D" uid="uid://c8dq8clflfm8s" path="res://Ability/Abilities/player_slash/player_slash.png" id="3_56evb"]
+
+[node name="Node" type="Node"]
+process_mode = 3
+script = ExtResource("1_oiiaw")
+ability = ExtResource("2_l4vas")
+stats = {
+"active_time": 0.0,
+"animation_time": 0.0,
+"area_scale": Vector2(0, 0),
+"can_move": false,
+"charge": 0,
+"cooldown_time": 0.0,
+"damage_type": 0,
+"damage_value": 0,
+"knockback_strenght": 0,
+"multistrike": 0,
+"stay_active": false
+}
+upgrade_name = "Double Strike"
+upgrade_description = "Attack +1 time, attack speed (+0.5s)"
+upgrade_icon = ExtResource("3_56evb")
+get_property = true
+save = true
