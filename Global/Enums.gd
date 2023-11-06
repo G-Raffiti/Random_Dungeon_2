@@ -1,6 +1,7 @@
 extends Node
 
 enum Element { PHYS, FIRE, WATER, NATURE }
+enum Rarity { COMMON, UNCOMMON, RARE, EPIC, LEGENDARY }
 
 class Damage:
 	var value: int = 0

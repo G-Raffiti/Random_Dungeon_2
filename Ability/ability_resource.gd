@@ -14,6 +14,16 @@ extends Resource
 @export var active_time: float
 @export var charge: int
 
+@export_group('Upgrades')
+@export var upgrades: Array[Upgrade] = []
+
+var skill_tree: SkillTree
+
+func learn_skill() -> Ability_Resource:
+	var ability = self.duplicate(true)
+	ability.skill_tree = SkillTree.new(self)
+	return ability
+
 func starts(_user : Character):
 	pass
 
