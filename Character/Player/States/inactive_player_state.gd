@@ -4,7 +4,7 @@ func get_state_name() -> StringName:
 	return 'INACTIVE'
 
 func can_enter_state() -> bool:
-	return state_machine.abilities.is_inactive()
+	return true
 
 func enter_state() -> void:
 	character.velocity = Vector2.ZERO

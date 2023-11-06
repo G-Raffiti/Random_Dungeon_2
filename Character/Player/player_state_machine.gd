@@ -7,6 +7,10 @@ var last_move_input: Vector2 = Vector2.RIGHT
 func initialize(ability_holder: AbilityHolder, character: Character) -> void:
 	super.initialize(ability_holder, character)
 	self.state = states['IDLE']
+	ability_holder.state_machine = self
+
+func back_main_state() -> void:
+	self.state = states['IDLE']
 
 # Get Inputs
 func _process(_delta):
