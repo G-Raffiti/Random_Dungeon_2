@@ -27,9 +27,9 @@ func starts(user : Character):
 		multistrike_count = multistrike
 		user.anim_tree.animation_finished.connect(func(): replay_attack(user))
 
-	scale_animation_speed(user, "parameters/Attack/TimeScale/scale", animation_active_time)
+	scale_animation_speed(user, animation_active_time)
 	user.sound.randomize_pitch()
-	user.set_anim("ability_slash")
+	user.set_anim(anim_name)
 	pass
 
 func ends(user : Character):
@@ -37,7 +37,7 @@ func ends(user : Character):
 		user.stats.speed_modifier = 1
 	user.hitbox.disable()
 	unscale_attack(user)
-	scale_animation_speed_back(user, "parameters/Attack/TimeScale/scale")
+	scale_animation_speed_back(user)
 
 func process(_user : Character, _delta: float):
 	return
@@ -48,7 +48,7 @@ func can_use(ability_holder: AbilityHolder) -> bool:
 func get_description(user: Character) -> String:
 	var ret = super.get_description(user)
 	ret += "A Melee Attack in the cursor direction,\n"
-	ret += "Deals " + get_damage(user).str() + " in "
+	ret += "Deals " + get_damage(user).to_str() + " in "
 	if area_scale.y <= 1 : ret += "small"
 	elif area_scale.y <= 1.5 : ret += "medium"
 	else : ret += "big"

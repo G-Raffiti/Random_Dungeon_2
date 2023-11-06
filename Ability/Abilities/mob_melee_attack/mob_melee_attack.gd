@@ -7,7 +7,7 @@ extends Ability_Resource
 @export var can_move: bool = false
 
 func starts(user: Character):
-	scale_animation_speed(user, 'parameters/melee_attack/TimeScale/scale')
+	scale_animation_speed(user)
 	user.hitbox.set_stats(get_damage(user.stats.damage_value), knockback_strenght)
 	user.sound.randomize_pitch()
 	if not can_move:
@@ -16,7 +16,7 @@ func starts(user: Character):
 
 func ends(user):
 	user.stats.speed_modifier = 1
-	scale_animation_speed_back(user, "parameters/melee_attack/TimeScale/scale")
+	scale_animation_speed_back(user)
 
 func process(_user, _delta):
 	return
@@ -30,7 +30,7 @@ func get_damage(user_damage: int) -> G.Damage:
 func get_description(user: Character) -> String:
 	var ret = super.get_description(user)
 	ret += "A Melee Attack in the target direction, deal damage on hit\n"
-	ret += "Damage = " + get_damage(user.stats.damage_value + damage_value).str()
+	ret += "Damage = " + get_damage(user.stats.damage_value + damage_value).to_str()
 	if can_move : ret += "\n" + "can move while attacking"
 	return ret
 #EndRegion

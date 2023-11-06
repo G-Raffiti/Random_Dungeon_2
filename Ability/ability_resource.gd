@@ -5,6 +5,7 @@ extends Resource
 @export_group('Info')
 @export var ability_name: StringName
 @export var icon: Texture2D
+@export var anim_name: StringName
 
 @export_group('Times and Charge')
 @export var stay_active: bool = false
@@ -25,12 +26,12 @@ func process(_user : Character, _delta: float):
 func can_use(ability_holder: AbilityHolder) -> bool:
 	return ability_holder.is_inactive()
 
-func scale_animation_speed(user : Character, parameter, _active_time: float = active_time):
+func scale_animation_speed(user : Character, _active_time: float = active_time):
 	var ratio = animation_time / _active_time
-	user.anim_tree.set(parameter, ratio)
+	user.anim_tree.set("parameters/" + anim_name + "/TimeScale/scale", ratio)
 
-func scale_animation_speed_back(user: Character, parameter):
-	user.anim_tree.set(parameter, 1)
+func scale_animation_speed_back(user: Character):
+	user.anim_tree.set("parameters/" + anim_name + "/TimeScale/scale", 1)
 
 func get_description(_user: Character) -> String:
 	return ""

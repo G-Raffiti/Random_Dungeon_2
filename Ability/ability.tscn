@@ -6,5 +6,7 @@
 script = ExtResource("1_gocff")
 
 [node name="active_timer" type="Timer" parent="."]
+one_shot = true
 
 [node name="cooldown_timer" type="Timer" parent="."]
+one_shot = true
