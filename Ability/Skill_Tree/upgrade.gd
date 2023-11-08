@@ -7,7 +7,7 @@ extends Resource
 @export var description: String = ""
 @export var icon: Texture2D = null
 
-func _init(_name: String, _description: String, _stats: Dictionary, _icon: Texture2D, _rarity: G.Rarity):
+func set_values(_name: String, _description: String, _stats: Dictionary, _icon: Texture2D, _rarity: G.Rarity):
   name = _name
   description = _description
   stats = _stats

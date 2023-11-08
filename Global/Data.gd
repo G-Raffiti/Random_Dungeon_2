@@ -28,7 +28,7 @@ const slash: Ability_Resource = preload("res://Ability/Abilities/player_slash/pl
 #const shuriken_resource: Ability_Resource = preload("res://Ability/Abilities/Shuriken/shuriken_resource.tres")
 #const throw_stick_resource: Ability_Resource = preload("res://Ability/Abilities/Stick/stick_resource.tres")
 
-@onready var abilities: Array[Ability_Resource] = []
+@onready var abilities: Array[Ability_Resource] = [slash]
 
 #const attack_tree: PackedScene = preload("res://Ability/Abilities/Attack/attack_tree.tscn")
 #const dash_tree: PackedScene = preload("res://Player/Ability_Trees/Dash/dash_tree.tscn")

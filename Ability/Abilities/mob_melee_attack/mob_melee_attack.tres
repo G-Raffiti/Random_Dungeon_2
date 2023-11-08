@@ -18,4 +18,3 @@ cooldown_time = 1.0
 active_time = 1.0
 charge = 1
 upgrades = Array[Resource("res://Ability/Skill_Tree/upgrade.gd")]([])
-show_stats = null

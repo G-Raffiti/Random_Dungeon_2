@@ -3,9 +3,8 @@ extends Resource
 
 var upgrades: Array[Upgrade] = []
 
-func _init(ability_resource: Ability_Resource):
-  for upgrade in ability_resource.upgrades:
-    upgrades.append(upgrade.duplicate(true))
+func _init(ability_upgrades: Array[Upgrade]):
+  upgrades = ability_upgrades.duplicate()
   upgrades.shuffle()
   upgrades.sort_custom(func(a,b): return a.rarity < b.rarity)
 
@@ -13,12 +12,12 @@ func _init(ability_resource: Ability_Resource):
   var b: Array[Upgrade] = []
   var c: Array[Upgrade] = []
   for upgrade in upgrades:
-    if (randf() < 0.33):
-      a.append(upgrade)
-    elif (randf() < 0.66):
-      b.append(upgrade)
-    else:
-      c.append(upgrade)
+   if (randf() < 0.33):
+     a.append(upgrade)
+   elif (randf() < 0.66):
+     b.append(upgrade)
+   else:
+     c.append(upgrade)
   
   # Y branch
   for i in a.size():
