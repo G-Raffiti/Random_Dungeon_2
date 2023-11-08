@@ -1,4 +1,7 @@
 extends Node2D
+class_name LevelService
+
+signal map_generated()
 
 @export var tile_size: int = 128
 @export var tileset: TileSet
@@ -12,6 +15,5 @@ func _ready():
 
 func generate_map():
 	var map: LevelGenerator.Map = tile_map_generation.generate_map(tile_size, tileset, level_generator)
-	print('map generation done')
 	unit_generation.spawn_units(map)
-	print('unit generation done')
+	map_generated.emit()
