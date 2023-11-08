@@ -27,10 +27,14 @@ var AbilityPoint: int = 0:
 		AbilityPoint = max(value, 0)
 		Event.player_gained_ability_point.emit()
 
-var Reserve: Array[Ability_Resource] = [Data.slash.duplicate(true)]
+var Reserve: Array[Ability_Resource] = []
 var Skill_Trees = {}
 
 func refresh_skills():
 	self.ability_main = ability_main
 	self.ability_secondary = ability_secondary
 	self.ability_movement = ability_movement
+
+func _ready():
+	var slash = Data.slash
+	Reserve.append(slash.learn_skill())
