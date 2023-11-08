@@ -48,7 +48,8 @@ finalized: ✔️✔️✔️, done: ✔️, in progress: 🔵,  to do: ❌
 	- Skill ✔️
 	- Passive Skill Trees ❌
 	- Pause ❌
-	- Main Menu ❌
+	- Main Menu ✔️
+	- Options ❌
 
 - World :
 	- proceduraly generated Dungeon Tilemap based ✔️
