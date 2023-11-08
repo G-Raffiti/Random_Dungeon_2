@@ -41,3 +41,10 @@ func _process(delta):
 	else:
 		if !isMoving:
 			state_machine.try_change_state('WALK')
+
+func save() -> Dictionary:
+	for prop in get_property_list():
+		print(prop.name)
+		print(get(prop.name))
+	var save_data = {}
+	return save_data
