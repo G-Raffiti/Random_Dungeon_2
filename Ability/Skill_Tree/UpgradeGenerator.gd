@@ -38,6 +38,7 @@ func get_dict():
 		elif p.type == 2 :
 			stats[p.name] = G.Element.PHYS
 	)
+	print(ability.upgrades)
 
 func get_value(hint) -> Variant:
 	match hint:
@@ -50,5 +51,6 @@ func get_value(hint) -> Variant:
 			return int(0)
 
 func save_upgrade():
-	var upgrade = Upgrade.new(upgrade_name, upgrade_description, stats, upgrade_icon, upgrade_rarity)
+	var upgrade = Upgrade.new()
+	upgrade.set_values(upgrade_name, upgrade_description, stats, upgrade_icon, upgrade_rarity)
 	ability.upgrades.append(upgrade)

@@ -10,7 +10,6 @@ script = ExtResource("1_oiiaw")
 ability = ExtResource("2_l4vas")
 stats = {
 "active_time": 0.0,
-"animation_time": 0.0,
 "area_scale": Vector2(0, 0),
 "can_move": false,
 "charge": 0,
