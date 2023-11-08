@@ -759,6 +759,7 @@ graph_offset = Vector2(36, -88)
 [node name="player" type="CharacterBody2D" node_paths=PackedStringArray("rotation_part", "movement", "hurtbox", "hitbox", "ability_holder", "state_machine", "sound", "hit_sound", "hit_anim", "anim", "anim_tree", "sprites")]
 top_level = true
 light_mask = 2
+scale = Vector2(0.5, 0.5)
 collision_layer = 257
 collision_mask = 51
 script = ExtResource("1_q1xjo")
@@ -915,7 +916,7 @@ region_rect = Rect2(194.9, 1632.4, 93.5, 114.4)
 z_index = -2
 z_as_relative = false
 y_sort_enabled = true
-position = Vector2(-44, -107)
+position = Vector2(-32, -116)
 range_item_cull_mask = 2
 shadow_filter = 2
 shadow_filter_smooth = 2.0
@@ -967,5 +968,4 @@ libraries = {
 [node name="AnimationTree" type="AnimationTree" parent="animation_&_sound"]
 tree_root = SubResource("AnimationNodeStateMachine_iuxlo")
 anim_player = NodePath("../AnimationPlayer")
-active = true
 parameters/ability_slash/TimeScale/scale = 1.0

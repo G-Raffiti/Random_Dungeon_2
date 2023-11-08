@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://djn5m6ipdpvod"]
+[gd_scene load_steps=54 format=3 uid="uid://djn5m6ipdpvod"]
 
 [ext_resource type="Script" path="res://Character/MOB/mob.gd" id="1_361uw"]
 [ext_resource type="PackedScene" uid="uid://dtqijsf4hb4gv" path="res://Effects/death_effect.tscn" id="2_2a0o2"]
@@ -17,9 +17,6 @@
 [ext_resource type="PackedScene" uid="uid://dax7ew0hmbprl" path="res://Character/MOB/States/idle_state.tscn" id="13_rwxyt"]
 [ext_resource type="PackedScene" uid="uid://cat4ewft6rhtx" path="res://Character/MOB/States/inactive_state.tscn" id="14_8gjea"]
 [ext_resource type="PackedScene" uid="uid://dj23b1h80ptj4" path="res://Character/MOB/States/wander_state.tscn" id="15_o1tnp"]
-[ext_resource type="PackedScene" uid="uid://qdmrugqc6gej" path="res://Character/MOB/States/chase_state.tscn" id="16_05car"]
-[ext_resource type="PackedScene" uid="uid://d08wgs03l4pd3" path="res://Character/MOB/States/melee_attack_state.tscn" id="18_7p7qr"]
-[ext_resource type="Resource" uid="uid://dwf5wj8f5v336" path="res://Ability/Abilities/mob_melee_attack/mob_melee_attack.tres" id="19_l660s"]
 [ext_resource type="Script" path="res://Global/Utils/audio_player_ramdom_pitch.gd" id="20_cwfch"]
 [ext_resource type="Script" path="res://UI/MOB/mob_ui_manager.gd" id="22_o4j1y"]
 [ext_resource type="Script" path="res://UI/MOB/MobHP/mob_hp_bar.gd" id="23_gjlie"]
@@ -55,21 +52,16 @@ size = Vector2(186, 215)
 [sub_resource type="Resource" id="Resource_ttgpv"]
 script = ExtResource("12_xodr6")
 ability_name = &""
+anim_name = &""
 stay_active = false
 animation_time = 0.0
 cooldown_time = 0.0
 active_time = 0.0
 charge = 0
+upgrades = Array[Resource("res://Ability/Skill_Tree/upgrade.gd")]([])
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wj04i"]
 radius = 1942.07
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_dhard"]
-radius = 965.871
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kxx01"]
-radius = 150.0
-height = 666.0
 
 [sub_resource type="Animation" id="Animation_fyfpv"]
 length = 0.001
@@ -478,6 +470,7 @@ transitions = ["Start", "idle", SubResource("AnimationNodeStateMachineTransition
 graph_offset = Vector2(-2, -55)
 
 [node name="mob" type="CharacterBody2D" node_paths=PackedStringArray("ui_manager", "movement", "hurtbox", "hitbox", "ability_holder", "state_machine", "sound", "hit_sound", "hit_anim", "anim", "anim_tree", "sprites")]
+scale = Vector2(0.5, 0.5)
 collision_layer = 513
 collision_mask = 51
 script = ExtResource("1_361uw")
@@ -590,33 +583,13 @@ script = ExtResource("11_22wus")
 collision_layer = 0
 collision_mask = 256
 
-[node name="inactive_range" type="CollisionShape2D" parent="state_machine/idle_state"]
+[node name="active_range" type="CollisionShape2D" parent="state_machine/idle_state"]
 z_index = -1
 shape = SubResource("CircleShape2D_wj04i")
 one_way_collision_margin = 0.0
 debug_color = Color(1, 1, 1, 0)
 
 [node name="wander_state" parent="state_machine" instance=ExtResource("15_o1tnp")]
-
-[node name="chase_state" parent="state_machine" instance=ExtResource("16_05car")]
-collision_layer = 0
-collision_mask = 256
-monitorable = false
-
-[node name="chase_range" type="CollisionShape2D" parent="state_machine/chase_state"]
-z_index = -1
-shape = SubResource("CircleShape2D_dhard")
-debug_color = Color(0.956863, 0.211765, 0, 0)
-
-[node name="melee_attack_state" parent="state_machine" instance=ExtResource("18_7p7qr")]
-ability_resource = ExtResource("19_l660s")
-
-[node name="melee_range" type="CollisionShape2D" parent="state_machine/melee_attack_state"]
-z_index = -1
-position = Vector2(0, -132)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_kxx01")
-debug_color = Color(0.882353, 0.0235294, 0, 0.352941)
 
 [node name="animation_&_sound" type="Node" parent="."]
 
