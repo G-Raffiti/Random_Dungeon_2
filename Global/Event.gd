@@ -1,5 +1,12 @@
 extends Node
 
+# Game
+signal start_new_game()
+signal game_started()
+signal quit_game()
+signal save_game()
+signal load_game()
+
 # Player
 signal player_take_hit()
 signal player_level_up()
@@ -19,3 +26,9 @@ signal mob_died(mob: Mob)
 
 # Map
 signal map_changed(map: LevelGenerator.Map)
+
+# UI
+signal ui_show_main_menu()
+signal ui_show_pause_menu()
+signal ui_show_hud()
+signal ui_show_option_menu()

@@ -1,6 +1,7 @@
-[gd_scene load_steps=18 format=3 uid="uid://dcbqthljpod4p"]
+[gd_scene load_steps=21 format=3 uid="uid://dcbqthljpod4p"]
 
 [ext_resource type="PackedScene" uid="uid://cw0f6lrf6c16c" path="res://World/world.tscn" id="1_is7pu"]
+[ext_resource type="Script" path="res://Service/game_service.gd" id="1_kft6p"]
 [ext_resource type="PackedScene" uid="uid://c6dgijxtv53tk" path="res://Character/Player/player.tscn" id="2_433b0"]
 [ext_resource type="PackedScene" uid="uid://cfdfghprkhxnw" path="res://UI/HUD/PlayerHP/PlayerHPBar.tscn" id="2_okq3f"]
 [ext_resource type="TileSet" uid="uid://cej7f3l66xbo1" path="res://_Art/World/TileSet/Blobs/TileSetNature.tres" id="2_ook0a"]
@@ -12,6 +13,8 @@
 [ext_resource type="Script" path="res://Service/effect_spawner.gd" id="7_e54r4"]
 [ext_resource type="Script" path="res://Service/mob_spawner.gd" id="8_w7wt4"]
 [ext_resource type="PackedScene" uid="uid://c7h4c0t0sptcv" path="res://UI/Menus/Ability_Inventory/ability_inventory.tscn" id="11_0j6x5"]
+[ext_resource type="Script" path="res://UI/Menus/Main_Menu/main_menu.gd" id="11_36lrr"]
+[ext_resource type="Texture2D" uid="uid://dqonjstq1di4o" path="res://_Art/image.png" id="12_ehqud"]
 [ext_resource type="Shader" path="res://UI/blur.gdshader" id="13_g7uv8"]
 
 [sub_resource type="Resource" id="Resource_cpro7"]
@@ -39,7 +42,9 @@ fill_to = Vector2(0.9, 0.5)
 shader = ExtResource("13_g7uv8")
 shader_parameter/amount = 1.769
 
-[node name="Game" type="Node2D"]
+[node name="Game" type="Node2D" node_paths=PackedStringArray("level_service")]
+script = ExtResource("1_kft6p")
+level_service = NodePath("world")
 
 [node name="world" parent="." instance=ExtResource("1_is7pu")]
 light_mask = 3
@@ -87,14 +92,6 @@ color = Color(0.0941176, 0.121569, 0.145098, 1)
 [node name="UI" type="CanvasLayer" parent="."]
 script = ExtResource("7_7b80p")
 
-[node name="Blur" type="ColorRect" parent="UI"]
-material = SubResource("ShaderMaterial_ekemo")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
 [node name="HUD" type="Control" parent="UI"]
 layout_mode = 3
 anchors_preset = 15
@@ -109,21 +106,139 @@ layout_mode = 1
 [node name="MiniMap" parent="UI/HUD" instance=ExtResource("6_d2vad")]
 layout_mode = 1
 
-[node name="MainMenu" type="Control" parent="UI"]
-layout_mode = 3
+[node name="Blur" type="Button" parent="UI"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Button" type="Button" parent="UI/MainMenu"]
+[node name="Blur" type="ColorRect" parent="UI/Blur"]
+material = SubResource("ShaderMaterial_ekemo")
 layout_mode = 1
-offset_right = 93.0
-offset_bottom = 31.0
-text = "New Game"
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="PauseMenu" type="PanelContainer" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -67.5
+offset_top = -63.5
+offset_right = 67.5
+offset_bottom = 63.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PauseMenu"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/PauseMenu/MarginContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/PauseMenu/MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/PauseMenu/MarginContainer/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="option_btn" type="Button" parent="UI/PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options
+"
+
+[node name="quit_btn" type="Button" parent="UI/PauseMenu/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Save & Quit"
 
 [node name="AbilityInventory" parent="UI" instance=ExtResource("11_0j6x5")]
+
+[node name="MainMenu" type="Control" parent="UI" node_paths=PackedStringArray("background", "play_btn", "option_btn", "save_and_quit_btn")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("11_36lrr")
+background = NodePath("background")
+play_btn = NodePath("PanelContainer/MarginContainer/VBoxContainer/play_btn")
+option_btn = NodePath("PanelContainer/MarginContainer/VBoxContainer/option_btn")
+save_and_quit_btn = NodePath("PanelContainer/MarginContainer/VBoxContainer/quit_btn")
+
+[node name="background" type="TextureRect" parent="UI/MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -169.0
+offset_top = -421.0
+offset_right = 169.0
+offset_bottom = 421.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("12_ehqud")
+expand_mode = 4
+stretch_mode = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/MainMenu"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UI/MainMenu/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="UI/MainMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="UI/MainMenu/PanelContainer/MarginContainer/VBoxContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="UI/MainMenu/PanelContainer/MarginContainer/VBoxContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Random Dungeon 2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="play_btn" type="Button" parent="UI/MainMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "New Game"
+
+[node name="option_btn" type="Button" parent="UI/MainMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Options
+"
+
+[node name="quit_btn" type="Button" parent="UI/MainMenu/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Save & Quit"
 
 [node name="services" type="Node" parent="."]
 
@@ -135,4 +250,4 @@ effects = NodePath("../../world/effetcs")
 script = ExtResource("8_w7wt4")
 units = NodePath("../../world/units")
 
-[connection signal="pressed" from="UI/MainMenu/Button" to="world" method="generate_map"]
+[connection signal="pressed" from="UI/Blur" to="UI" method="game_mode"]
